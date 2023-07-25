@@ -18,7 +18,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 원없이 개발해"봄" # the main title
+title: 원없이 개발해봄 # the main title
 
 tagline: Onebom의 개발 블로그입니다. # it will display as the sub-title
 

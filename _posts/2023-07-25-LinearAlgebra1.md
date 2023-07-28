@@ -6,7 +6,7 @@ categories: [DL, LinearAlgebra]
 tags: [DL, LinearAlgebra]
 toc: true
 math: true
-img_path: '/_posts/img/20210725'
+img_path: '../_posts/img/20230725'
 ---
 
 해당 포스트는 주재걸교수님의 "인공지능을 위한 선형대수" 강의를 듣고 작성하였습니다.

@@ -6,7 +6,6 @@ categories: [DL, LinearAlgebra]
 tags: [DL, LinearAlgebra]
 toc: true
 math: true
-img_path: '_site/posts/linearAlgebra1'
 ---
 
 해당 포스트는 주재걸교수님의 "인공지능을 위한 선형대수" 강의를 듣고 작성하였습니다.
@@ -144,7 +143,7 @@ $$\begin{bmatrix} 60 \\ 65 \\ 55 \end{bmatrix}x_1+\begin{bmatrix} 5.5 \\ 5.0 \\ 
 > - $$Span\{v_1, \cdots , v_p\}$$은 *subset of $$\mathbb{R}^n$$ spanned by $$v_1,\cdots, v_p$$*라고 말하기도 한다.
 > 
 > 기하학적 관점에서 span에 대해 이해해보자.  
-> ![figure1](figure1.png)   
+> ![figure1](/_site/posts/LinearAlgebra1/figure1.png)   
 > 3차원공간의 0벡터가 아닌 두 v_1과 v_2이 주어졌을때, v_1에 어떤 scalar를 곱하더라도 v_2이 표현되지 않는다면 $$Span\{v_1, v_2\}$$는 3차원 상의 평면(plane)을 의미하게된다.(v_1, v_2, 0 벡터를 포함하는)
 
 다시 vector equation으로 돌아와서, 

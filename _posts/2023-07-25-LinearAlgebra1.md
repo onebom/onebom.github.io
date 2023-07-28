@@ -6,13 +6,13 @@ categories: [DL, LinearAlgebra]
 tags: [DL, LinearAlgebra]
 toc: true
 math: true
-img_path: '../_posts/img/20230725'
+img_path: '/posts/LinearAlgebra1'
 ---
 
 해당 포스트는 주재걸교수님의 "인공지능을 위한 선형대수" 강의를 듣고 작성하였습니다.
 오늘의 글을 통해 꼭 알아야 하는 내용은 다음과 같습니다.
 > [summary]
-> 1. 
+> 1. linear equation을 matrix간
 
 ---
 ## 1. Linear System

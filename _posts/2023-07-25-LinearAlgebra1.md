@@ -11,7 +11,9 @@ math: true
 해당 포스트는 주재걸교수님의 "인공지능을 위한 선형대수" 강의를 듣고 작성하였습니다.
 오늘의 글을 통해 꼭 알아야 하는 내용은 다음과 같습니다.
 > [summary]
-> 1. linear equation을 matrix간
+> 1. linear equation을 matrix와 vector combination으로 각각 표현할 수 있어야한다.
+> 2. inverse matrix를 통해 liner equation의 해를 구할 수 있어야한다.
+> 3. span과 linear independent의 개념을 이해한다.
 
 ---
 ## 1. Linear System
@@ -141,6 +143,7 @@ $$\begin{bmatrix} 60 \\ 65 \\ 55 \end{bmatrix}x_1+\begin{bmatrix} 5.5 \\ 5.0 \\ 
 > - 따라서, $$Span\{v_1, \cdots , v_p\}$$은   
 >    $$ c_1v_1+ \cdots + c_pv_p$$으로 표현 할 수 있고, 이때 c_1...c_p는 임의의 모든 실수가 들어갈 수 있다.
 > - $$Span\{v_1, \cdots , v_p\}$$은 *subset of $$\mathbb{R}^n$$ spanned by $$v_1,\cdots, v_p$$*라고 말하기도 한다.
+> - ex) v1=[1,0], v2=[0,1] 두개의 벡터로 span을 하게 되면 모든 2차원 벡터를 만들 수 있다.
 > 
 > 기하학적 관점에서 span에 대해 이해해보자.  
 > ![figure1](/assets/img/posts/LinearAlgebra1/figure1.png)   
@@ -215,6 +218,7 @@ $$3v_1+2v_2+1v_3=b$$로 표현 할 수 있다.
 $$3v_1+2v_2+1v_3=3v_1+2v_2+(2v_1+3v_2)=5v_1+5v_2$$가 된다.   
 따라서, $$x=\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 5 \\ 5 \\ 0 \end{bmatrix} $$이 또다른 해가 될 수 있다.
 
-
+---
+다음글에서는 linear transformation을 통해 vector의 도메인이 어떻게 전환될 수 있는지에 대해 중점적으로 다루겠습니다.
 
 

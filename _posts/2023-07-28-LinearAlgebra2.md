@@ -82,13 +82,20 @@ tanh layer $$tanh(Wx+b)$$는 다음으로 구성되어있다;
 이 figure가 의미하는 바는,   
 처음에는 basis vector와 축 벡터가 일련의 A행렬곱이 일어나는 T를 거치면서 vector 변환이 일어나, 모눈종이가 꾸겨지는 과정을 보여준다.   
 옆으로 흐르는 이유는 bias로 인한 것이고, 이후 가장자리가 눌려지는 부분은 non-linear한 activation function의 연산으로 중앙에서 멀어지는 부분의 차이를 최소화하기 위해 압축하는 과정을 도식화한 부분이라고 한다.    
+(시간이 나면 꼭 저 포스트 글을 읽어보도록하자.)
 
-더욱 직접적으로 하나의 layer에서 일어나는 linear transformation 연산을 살펴보자.    
+더욱 직접적으로 하나의 layer에서 일어나는 linear transformation 연산을 살펴보고자 한다.    
 ![figure3](/assets/img/posts/LinearAlgebra2/figure3.png) 
+- input vector에 bias term이 추가된 [56,231,24,2,1]에 대해서 A행렬을 통해 Transformation을 거치게 되면, 결과값에 따라 A의 가중치가 업데이트 되어간다
 
 ## 6. Onto & One-to-One
-간단하게 인공지능 연산과정에 대해 이야기하자면, 알고있는 정보로 이뤄진 input data를 일련의 linear transformation을 거치게해서 우리가 얻고자하는 정보 domain의 output으로 전환하는 과정이라 말할 수 있을 것 같다.   
+간단하게 인공지능 연산과정에 대해 다시 이야기하자면, 알고있는 정보로 이뤄진 input data를 일련의 linear transformation을 거치게해서 우리가 얻고자하는 정보 domain의 output으로 전환하는 과정이라 말할 수 있을 것 같다.   
 input을 output으로 전환하는 과정에서 우리는 2가지 조건을 고려해야한다; ONTO & ONE-TO-ONE
 >**[ONTO란]**   
->
->ONE-TO-ONE이란
+> 공역과 치역이 동일한 transformation이다.   
+> - 공역에서 어떤 vector를 뽑아도 정의역의 함수값(치역)이여야 한다.
+> - 따라서, $$\mathbb{R}^n -> \mathbb{R}^m$$에 대해서 n<m일 수 없다.
+> - $$\mathbb{R}^n onto \mathbb{R}^m$$는 colums A가 $$\mathbb{R}^m$$$$를 span한다.
+>**[ONE-TO-ONE이란]**
+>모든 치역이 하나의 정의역에만 mapping되는 transformation이다.   
+> - one-to-one은 T(x)=Ax에 대해서 A가 모두 linearly independent하다

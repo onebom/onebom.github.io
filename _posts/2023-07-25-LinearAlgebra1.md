@@ -170,7 +170,7 @@ vector equation을 알았다면 우리는 4가지 방법을 통해 행렬을 쪼
    \begin{bmatrix} x_1 & y_1 \\ x_2 & y_2 \\ x_3 & y_3 \end{bmatrix} = \begin{bmatrix} \mathbf{x}\mathbf{y} \end{bmatrix}
    $$   
 
-   이때 ㅌ
+   이때 x와 y column vector는 행렬 A의 Span 범주 내 무조건 포함된다.   
 
    $$\mathbf{x}=\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}1+\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}2+\begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}3$$
 

@@ -157,16 +157,47 @@ $$\begin{bmatrix} 60 \\ 65 \\ 55 \end{bmatrix}x_1+\begin{bmatrix} 5.5 \\ 5.0 \\ 
 => 즉, b가 a_1, a_2, a_3들로 표현할 수 있는 공간 상에 있어야 된다는 것이다.   
 - 예를 들자면, xy평면을 표현하는 v1, v2 벡터가 있을때, 당연하게도 두벡터를 가지고 z축에 있는 값을 표현하지는 못하지 않는가
 
-vector equation을 알았다면 우리는 4가지 방법을 통해 행렬을 쪼개 표현할 수 있다.
+vector equation을 알았다면 우리는 4가지 방법을 통해 행렬을 쪼개 표현할 수 있다.    
+앞으로 행렬을 쪼개고 붙이고 이리저리 삶아먹을 수 있어야하니, 많이 연습해두도록 하자
 1. inner product
    
-   $$ \begin{bmatrix} 60 & 5.5 & 1 \\ 65 & 5.0 & 0 \\ 55 & 6.0 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = A\mathbb{x} = \begin{bmatrix} \mathbb{a_1} & \mathbb{a_2} & \mathbb{a_3} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \mathbb{a_1}x_1+\mathbb{a_2}x_2+\mathbb{a_3}x_3 $$
+   $$ \begin{bmatrix} 60 & 5.5 & 1 \\ 65 & 5.0 & 0 \\ 55 & 6.0 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = A\mathbb{x} = \begin{bmatrix} \mathbf{a_1} & \mathbf{a_2} & \mathbf{a_3} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \mathbf{a_1}x_1+\mathbf{a_2}x_2+\mathbf{a_3}x_3 $$
    
 2. column combination
-   수식 쓰기 귀찮아
+   
+   $$
+   \begin{bmatrix} 1 & 1 & 0 \\ 1 & 0 & 1 \\ 1 & -1 & 1 \end{bmatrix} \begin{bmatrix} 1 & -1 \\ 2 & 0 \\ 3 & 1 \end{bmatrix} = 
+   \begin{bmatrix} x_1 & y_1 \\ x_2 & y_2 \\ x_3 & y_3 \end{bmatrix} = \begin{bmatrix} \mathbf{x}\mathbf{y} \end{bmatrix}
+   $$   
+
+   이때 ㅌ
+
+   $$\mathbf{x}=\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}1+\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}2+\begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}3$$
+
+   $$\mathbf{y}=\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}(-1)+\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}0+\begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}1$$
+
+   
 3. row combination
+
+   $$
+     \begin{bmatrix} 1 & 2 & 3 \\ 1 & 0 & -1 \end{bmatrix}\begin{bmatrix} 1 & 1 & 0 \\ 1 & 0 & 1 \\ 1 & -1 & 1 \end{bmatrix} = \begin{bmatrix} x_1 & x_2 & x_3 \\ y_1 & y_2 & y_3 \end{bmatrix} = \begin{bmatrix} \mathbf{x}^T \\ \mathbf{y}^T \end{bmatrix}
+   $$
+
+   $$
+   \mathbf{x}^T= \begin{bmatrix} x_1 & x_2 & x_3 \end{bmatrix} = 1\begin{bmatrix} 1 & 1 & 0\end{bmatrix}+2\begin{bmatrix} 1 & 0 & 1\end{bmatrix}+3\begin{bmatrix} 1 & -1 & 1\end{bmatrix}
+   $$
+
+   $$
+   \mathbf{y}^T= \begin{bmatrix} y_1 & y_2 & y_3 \end{bmatrix} = 1\begin{bmatrix} 1 & 1 & 0\end{bmatrix}+0\begin{bmatrix} 1 & 0 & 1\end{bmatrix}+(-1)\begin{bmatrix} 1 & -1 & 1\end{bmatrix}
+   $$
+
 4. **sum of rank-1 outer product**
    - Rank가 1인 matrix의 outer product 합으로도 행렬을 표현할 수 있다.
+   - 이후 rank에 대해서 설명하겠지만, 그냥 간단하게 한개의 열로 이뤄진 행렬이라 보면 된다.
+
+   $$
+   \begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} = \begin{bmatrix} 1\\1\\1\end{bmatrix} \begin{bmatrix} 1 & 2 & 3 \end{bmatrix} + \begin{bmatrix} 1\\-1\\1\end{bmatrix} \begin{bmatrix} 4 & 5 & 6 \end{bmatrix} = \begin{bmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \\ 1 & 2 & 3 \end{bmatrix}\begin{bmatrix} 4 & 5 & 6 \\ -4 & -5 & -6 \\ 4 & 5 & 6 \end{bmatrix}
+   $$
 
 ## 3. Linear Independence
 
@@ -219,6 +250,7 @@ $$3v_1+2v_2+1v_3=3v_1+2v_2+(2v_1+3v_2)=5v_1+5v_2$$가 된다.
 따라서, $$x=\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 5 \\ 5 \\ 0 \end{bmatrix} $$이 또다른 해가 될 수 있다.
 
 ---
+
 다음글에서는 linear transformation을 통해 vector의 도메인이 어떻게 전환될 수 있는지에 대해 중점적으로 다루겠습니다.
 
 

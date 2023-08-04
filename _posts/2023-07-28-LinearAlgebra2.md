@@ -38,7 +38,7 @@ basis는 이러한 vector 공간을 대표하는 vector이다.
 그렇담, 같은 subspace H의 linearly independent한 vector set은 하나만 존재하는가? 즉,
 ### point1) subspace H의 basis set은 하나만 존재하는가?
 답은 아니다!
-![figure1](/assets/img/posts/LinearAlgebra2/figure1.png)   
+![figure1](/assets/img/posts/LinearAlgebra2/figure1.jpg)   
 동일한 xy평면의 한 점을 표현한다고 했을떄, v1과 v2를 사용하여 점을 나타낼수도 있지만 다른 coefficient를 통해 a1과 a2를 사용해서 나타낼 수도 있다.   
 이를 **change of basis**라 한다.      
 이후에 배울 eigen decomposition에서도 행렬의 basis를 전환함으로써 행렬을 다른 형식으로 분해할 수 있다.    

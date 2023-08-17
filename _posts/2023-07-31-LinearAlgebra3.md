@@ -216,6 +216,8 @@ $$\hat{b}=f(b)=(b\cdot u_1)u_1+(b\cdot u_2)u_2 = ({u_1}^Tb)u_1+({u_2}^Tb)u_2=(u_
 
 $$ = \begin{bmatrix} u_1 & u_2  \end{bmatrix}\begin{bmatrix} {u_1}^T \\ {u_2}^T  \end{bmatrix}b= UU^Tb$$
 
+주의할점) 행렬 U는 unit vector끼리 수직한 Orthonormal Matrix다
+
 다시 normal equation으로 돌아와서 $$A=U=\begin{bmatrix} u_1 & u_2 \end{bmatrix}$$라면,   
 
 $$C=A^TA=\begin{bmatrix} {u_1}^T \\ {u_2}^T \end{bmatrix} \begin{bmatrix} u_1 & u_2 \end{bmatrix}=I$$
@@ -226,7 +228,11 @@ $$\hat{b}=A(A^TA)^{-1}A^Tb= A(I^-1)A^Tb=AA^Tb=UU^Tb$$
 
 로 쓸 수 있다!
 
-## 4. Gram-Schmidt Orthogonalization
-이점이
+### point6) 왜 normal equation에서 unit vector를 사용해 $\hat{b}$를 표현하고자 하는가
+물론 식이 간편해지는 이유도 있겠지만 인공지능 학습의 관점에서 살펴보자면,   
+projection은 벡터 간의 선형결합으로 표현되기 때문에, 똑같은 사영 지점을 표현하더라도 벡터간의 기울기가 가까워질수록 해당 벡터의 weight값이 엄청 커진다.   
+그렇게되면, 학습 과정에서 조금의 오차가 생기더라도 해당 벡터에 대해서 sensetive하여 그 벡터에 대해서 학습에 큰 영향을 주게된다.    
+따라서 최대한 벡터간 기울기를 멀리 떨어뜨려야만 특정 feature에 치우침 없이 학습을 할수 있다.   
+이를 위한 regularization 기법이 있다; 바로 lasso & ridge regression이다. 이후 시간이 되면 해당 기법에 대한 포스트를 따로 올리겠다.
 
-## QR Factorization
+## 4. Gram-Schmidt Orthogonalization & QR Factorization

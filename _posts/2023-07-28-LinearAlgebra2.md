@@ -1,7 +1,7 @@
 ---
 title: 인공지능을 위한 선형대수:Linear System & Transformation(2)
 author: onebom
-date: 2021-07-28 23:15:00 +0800
+date: 2023-07-28 23:15:00 +0800
 categories: [DL, LinearAlgebra]
 tags: [DL, LinearAlgebra]
 toc: true

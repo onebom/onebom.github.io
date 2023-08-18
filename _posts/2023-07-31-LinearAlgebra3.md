@@ -1,7 +1,7 @@
 ---
 title: 인공지능을 위한 선형대수:Least Square
 author: onebom
-date: 2021-07-31 18:15:00 +0800
+date: 2023-07-31 18:15:00 +0800
 categories: [DL, LinearAlgebra]
 tags: [DL, LinearAlgebra]
 toc: true

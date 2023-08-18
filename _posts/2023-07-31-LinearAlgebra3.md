@@ -248,7 +248,7 @@ $x_1$을 기준으로;
 
 $$v_1=x_1/ \lVert x_1 \rVert=\begin{bmatrix} 3/\sqrt{45} \\ 6/\sqrt{45} \\ 0 \end{bmatrix}$$
 
-$$v_2=x_2-{{x_2\dot x_1}\over{x_1 \dot x_1}}x_1=\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}-{15\over \sqrt{45}}\begin{bmatrix} 3 \\ 6 \\ 0 \end{bmatrix}=\begin{bmatrix} 0 \\ 0 \\ 2 \end{bmatrix} \leftrightarrow \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$$
+$$v_2=x_2-{x_2\dot x_1 \over{x_1 \dot x_1}}x_1=\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}-{15\over \sqrt{45}}\begin{bmatrix} 3 \\ 6 \\ 0 \end{bmatrix}=\begin{bmatrix} 0 \\ 0 \\ 2 \end{bmatrix} \leftrightarrow \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$$
 
 를 구할 수 있다. 따라서 $\{v_1(x_1),v_2\}$는 W의 orthogonal basis이다.
 vector x_3이 추가된다면, v_3=x_3-v1-v2가 된다.
@@ -261,7 +261,7 @@ $$\begin{bmatrix} 3 && 1 \\ 6 && 2 \\ 0 && 2 \end{bmatrix} = \begin{bmatrix} 3/\
 
 - 우리가 구한 orthonormal set에 coefficient matrix C를 곱해서 $A(={x_1,x_2})$로 돌이킬 수 있다.
 
-$$C=\begin{bmatrix} \lVert x_1 \rVert && {{x_1 \dot x_2} \over{\lVert x_1 \rVert}} \\ 0 && \lVert x_2 \rVert \end{bmatrix} = \begin{bmatrix} \sqrt{45} && {15\over \sqrt{45}} \\ 0 && 2 \end{bmatrix}$$
+$$C=\begin{bmatrix} \lVert x_1 \rVert && {x_1 \dot x_2 \over{\lVert x_1 \rVert}} \\ 0 && \lVert x_2 \rVert \end{bmatrix} = \begin{bmatrix} \sqrt{45} && {15\over \sqrt{45}} \\ 0 && 2 \end{bmatrix}$$
 
 - C의 첫번째 column은 x_1을 구성하기 위한 v_1과 v_2 coefficient의 모음이다. 따라서 위에서 전개했듯이 $x_1= \sqrt{45}v_1+0v_2$이므로 $[\sqrt{45},0]$이 된다.
 - C의 두번째 column은 x_2을 구성하기 위한 v_1과 v_2 coefficient의 모음이다. $x_2={15\over \sqrt{45}}v_1+2v_2$이므로 $[{15\over \sqrt{45}},2]$가 된다.
@@ -274,5 +274,5 @@ $$A=QR$$
 - 이때 R이 triangular matrix라는 점이 흥미롭다.
 
 ---
-실제 linear하진 않은 데이터 환경에서 어떻게 eqation을 풀어낼 수 있는지 알아보았다. 풀어내는 방법에 대해서는 알아보았지만, 실제 모델 연산에 있어서 방대한 크기의 matrix 연산은 컴퓨터 환경에서 해내기 어렵다.   
+실제 linear하지 않은 데이터 환경에서 어떻게 eqation을 풀어낼 수 있는지 알아보았다. 풀어내는 방법에 대해서는 알아보았지만, 실제 모델 연산에 있어서 방대한 크기의 matrix 연산은 컴퓨터 환경에서 해내기 어렵다.   
 다음 시간에 eqation을 푸는 것에 있어서 어떻게 빠르고 효율적으로 연산할 수 있는지에 대해 알아볼 것이다.

@@ -11,7 +11,9 @@ math: true
 해당 포스트는 주재걸교수님의 "인공지능을 위한 선형대수" 강의를 듣고 작성하였습니다.
 오늘의 글을 통해 꼭 알아야 하는 내용은 다음과 같습니다.
 > [summary]
-> 1.
+> 1. least sqaure 문제를 이해하고, normal equation으로 어떻게 풀어내는지 알아본다.
+> 2. Orthogonal projection의 필요성을 알고, 이를 normal equation에 적용해본다.
+> 3. Gram-schmidt와 QR Factorization을 사용하는 이유에 대해 알아본다.
 
 ---
 
@@ -172,20 +174,19 @@ $$\rightarrow \hat{b}=f(b)=A\hat{x}=A(A^TA)^{-1}A^Tb$$
 projection을 구하기 이전에 orthogonal에 대해서 좀 더 알아보자.   
 > **orthogonal set - Defn**    
 > {u_1, ..., u_p} vector set이 있을 때, 해당 set의 모든 vector가   
-> $u_i \cdot u_j = 0 whenever j \ne j$를 만족하면 **orthogonal set**이라 부른다. 
+> $u_i \cdot u_j = 0 whenever j \ne j$를 만족하면 **orthogonal set**이라 부른다.    
 > **orthonormal set - Defn**   
 > {u_1, ..., u_p} vector set이 있을 때, orthogonal set이면서 동시에 unit vector로 이뤄진 경우 **orthonormal set**이라 부른다.
-> - 일련의 vector set이 있을 때, orthogonal(or orthonormal) basis set으로 변환하는 시스템을 Gram-Schmidt process라 한다. 
+> - orthonormal vector들로 이뤄진 행렬을 직교행렬(orthogonal matrix) Q라 하는데, Q의 column들은 모두 linearly independent하므로 full rank를 가지며 Q^TQ=I이므로 전치행렬이 역행렬이라는 특징을 가진다. 
 
-orthogonal basis vector ($\into W$) set이 주어졌을 때, vector y를 W 평면에 orthogonal porjection을 취해보자 (orthogonal projection of 𝐲 ∈ R𝑛 **onto** 𝑊.)
+orthogonal basis vector ($$\in W$$) set이 주어졌을 때, vector y를 W 평면에 orthogonal porjection을 취해보자 (orthogonal projection of 𝐲 ∈ R𝑛 **onto** 𝑊.)
 1.  Orthogonal Projection $\hat{y}$ of y onto Line
 ![figure7](/assets/img/posts/LinearAlgebra3/figure7.png)   
 위 figure에서 $$\hat{y}$$를 "방향 x 길이"로 표현할 수 있다.
-1. $$\hat{y}$$의 길이   
-   벡터 y와 u 사이 각이 $\theta$라고 주어졌을 때,   
+1. $$\hat{y}$$의 길이: 벡터 y와 u 사이 각이 $\theta$라고 주어졌을 때,   
     $$\lVert \hat{y} \rVert =  \lVert y \rVert \cos{\theta} ={y\cdot u \over {\lVert u \rVert}}$$
-2. $$\hat{y}$$의 방향
-   u 벡터의 방향과 동일하다(=u방향의 unit-vector); $${1 \over {\lVert u \rVert}}\times u $$
+2. $$\hat{y}$$의 방향: u 벡터의 방향과 동일하다(=u방향의 unit-vector);   
+   $${1 \over {\lVert u \rVert}}\times u $$
 
 $$\hat{y}={1 \over {\lVert u \rVert}} \times u \times {y\cdot u \over {\lVert u \rVert}} = {y\cdot u \over {u \cdot u}}u$$
 
@@ -193,7 +194,7 @@ $$\hat{y}={1 \over {\lVert u \rVert}} \times u \times {y\cdot u \over {\lVert u 
 
 $$\hat{y}= (y \cdot u)u$$
 
-3.  Orthogonal Projection $\hat{y}$ of y onto Plane
+1.  Orthogonal Projection $\hat{y}$ of y onto Plane
 사영할 subspace의 dimension이 늘어났다고 크게 바뀌지 않는다.
 앞서 말했듯, 구하고자 하는 $\hat{y}$는 x_1과 x_2 라인에 y를 사영시킨 $\hat{y_1}, \hat{y_2}$의 선형결합으로 표현가능하기 때문이다.   
 ![figure8](/assets/img/posts/LinearAlgebra3/figure8.png)     
@@ -224,15 +225,54 @@ $$C=A^TA=\begin{bmatrix} {u_1}^T \\ {u_2}^T \end{bmatrix} \begin{bmatrix} u_1 & 
 
 이기 때문에, 
 
-$$\hat{b}=A(A^TA)^{-1}A^Tb= A(I^-1)A^Tb=AA^Tb=UU^Tb$$
+$$\hat{b}=A(A^TA)^{-1}A^Tb= A(I^{-1})A^Tb=AA^Tb=UU^Tb$$
 
 로 쓸 수 있다!
 
 ### point6) 왜 normal equation에서 unit vector를 사용해 $\hat{b}$를 표현하고자 하는가
 물론 식이 간편해지는 이유도 있겠지만 인공지능 학습의 관점에서 살펴보자면,   
 projection은 벡터 간의 선형결합으로 표현되기 때문에, 똑같은 사영 지점을 표현하더라도 벡터간의 기울기가 가까워질수록 해당 벡터의 weight값이 엄청 커진다.   
-그렇게되면, 학습 과정에서 조금의 오차가 생기더라도 해당 벡터에 대해서 sensetive하여 그 벡터에 대해서 학습에 큰 영향을 주게된다.    
+그렇게되면, 학습 과정에서 조금의 오차가 생기더라도 해당 벡터에 대해서 sensetive하여 그 벡터에 대해서 학습에 큰 영향을 주게된다. 예를 들어, vec1과 vec2가 강한 상관관계를 갖게 된다면 결과값이 1변할때 v1 때문인지 v2 때문이지 알수 없게된다 이를 다중공산성 문제라 칭한다.   
 따라서 최대한 벡터간 기울기를 멀리 떨어뜨려야만 특정 feature에 치우침 없이 학습을 할수 있다.   
 이를 위한 regularization 기법이 있다; 바로 lasso & ridge regression이다. 이후 시간이 되면 해당 기법에 대한 포스트를 따로 올리겠다.
 
 ## 4. Gram-Schmidt Orthogonalization & QR Factorization
+위에서 다룬 내용에서 좀더 이야기해보자면, feature를 추출할 때 벡터의 방향성이 어느정도 수직이 되지 않으면 dl network는 중복이 되는 정보를 추출하게 된다.    
+따라서 Linearly independent한 orthonormal vector set으로 기존 벡터를 mapping하여 전환해줘야한다. 그래야지 feature가 서로에게 영향을 주지않는다. 이러한 기법을 Gram-Schmidt라한다.   
+
+[Example]
+$W=Span\{x_1,x_2\}$에서, 수직이 아닌 두벡터 $x_1=\begin{bmatrix} 3 \\ 6 \\ 0 \end{bmatrix}, x_2=\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}$가 주어졌을 때,   
+$x_1$을 기준으로;
+1. x_1의 unit vector u_1을 구했다.
+2. v2에서 u_1을 빼면 u_1에 직교하는 u_2 vector를 얻어낼 수 있다.
+
+$$v_1=x_1/ \lVert x_1 \rVert=\begin{bmatrix} 3/\sqrt{45} \\ 6/\sqrt{45} \\ 0 \end{bmatrix}$$
+
+$$v_2=x_2-{{x_2\dot x_1}\over{x_1 \dot x_1}}x_1=\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}-{15\over \sqrt{45}}\begin{bmatrix} 3 \\ 6 \\ 0 \end{bmatrix}=\begin{bmatrix} 0 \\ 0 \\ 2 \end{bmatrix} \leftrightarrow \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$$
+
+를 구할 수 있다. 따라서 $\{v_1(x_1),v_2\}$는 W의 orthogonal basis이다.
+vector x_3이 추가된다면, v_3=x_3-v1-v2가 된다.
+- Linearly Independent하지만, orthogonal하지 않은 벡터 set이 주어졌을 때 그람슈미츠는 set의 각 vector가 다른 vector들과 orthogonal하고 길이가 1인 단위벡터들로 구성되게 한다. 
+
+### point7) QR Factorization의 의의를 알아보자
+이제 반대로, 위의 예시에서 구한 orthogonal set인 v_1,v_2를 x_1,x_2로 복귀해보자
+
+$$\begin{bmatrix} 3 && 1 \\ 6 && 2 \\ 0 && 2 \end{bmatrix} = \begin{bmatrix} 3/\sqrt{45} && 0 \\ 6/\sqrt{45} && 0 \\ 0 && 1 \end{bmatrix} C$$
+
+- 우리가 구한 orthonormal set에 coefficient matrix C를 곱해서 $A(={x_1,x_2})$로 돌이킬 수 있다.
+
+$$C=\begin{bmatrix} \lVert x_1 \rVert && {{x_1 \dot x_2} \over{\lVert x_1 \rVert}} \\ 0 && \lVert x_2 \rVert \end{bmatrix} = \begin{bmatrix} \sqrt{45} && {15\over \sqrt{45}} \\ 0 && 2 \end{bmatrix}$$
+
+- C의 첫번째 column은 x_1을 구성하기 위한 v_1과 v_2 coefficient의 모음이다. 따라서 위에서 전개했듯이 $x_1= \sqrt{45}v_1+0v_2$이므로 $[\sqrt{45},0]$이 된다.
+- C의 두번째 column은 x_2을 구성하기 위한 v_1과 v_2 coefficient의 모음이다. $x_2={15\over \sqrt{45}}v_1+2v_2$이므로 $[{15\over \sqrt{45}},2]$가 된다.
+  
+해당 계산 과정을 일반화해보면,   
+여러 vector set으로 이뤄진 A가 주어졌을 때, 직교행렬 Q와 각 직교 basis의 coefficient 행렬 R의 곱으로 A를 분해할 수 있다.(이 과정이 QR Factorization이다.)
+
+$$A=QR$$
+
+- 이때 R이 triangular matrix라는 점이 흥미롭다.
+
+---
+실제 linear하진 않은 데이터 환경에서 어떻게 eqation을 풀어낼 수 있는지 알아보았다. 풀어내는 방법에 대해서는 알아보았지만, 실제 모델 연산에 있어서 방대한 크기의 matrix 연산은 컴퓨터 환경에서 해내기 어렵다.   
+다음 시간에 eqation을 푸는 것에 있어서 어떻게 빠르고 효율적으로 연산할 수 있는지에 대해 알아볼 것이다.

@@ -6,6 +6,7 @@ categories: [DL, LinearAlgebra]
 tags: [DL, LinearAlgebra]
 toc: true
 math: true
+published: false
 ---
 
 해당 포스트는 주재걸교수님의 "인공지능을 위한 선형대수" 강의를 듣고 공돌이의 수학정리 블로그를 참조하여 작성하였습니다.

@@ -1,5 +1,5 @@
-baseURL: https://example.org/
+baseURL: https://onebom.github.io/
 languageCode: en-us
-title: My New Hugo Site
+title: 원없이 개발해보옴
 
 theme: ["PaperMod"]

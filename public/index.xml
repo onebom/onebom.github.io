@@ -5,88 +5,7 @@
     <link>http://localhost:1313/</link>
     <description>Recent content in Home on Awesome Hugo blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Table of content</title>
-      <link>http://localhost:1313/posts/table-of-content/</link>
-      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/table-of-content/</guid>
-      
-      <description>&lt;h2 id=&#34;table-of-content&#34;&gt;Table of content&lt;/h2&gt;
-&lt;p&gt;This theme supports displaying table of content (ToC) in blog posts.&lt;/p&gt;
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-&lt;p&gt;You can manage a ToC with two parameters:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;global &lt;code&gt;toc&lt;/code&gt; parameter;&lt;/li&gt;
-&lt;li&gt;post &lt;code&gt;toc&lt;/code&gt; parameter.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The post &lt;code&gt;toc&lt;/code&gt; parameter has higher priority than the global &lt;code&gt;toc&lt;/code&gt; parameter.&lt;/p&gt;
-&lt;h2 id=&#34;enable-table-of-content-on-all-posts&#34;&gt;Enable table of content on all posts&lt;/h2&gt;
-&lt;p&gt;To enable ToC on all posts (globally) set parameter &lt;code&gt;toc&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in &lt;code&gt;hugo.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;toc&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To disable ToC globally, simply ignore the &lt;code&gt;toc&lt;/code&gt; parameter or set it to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Math Typesetting - use Mathematical notation in blog posts</title>
-      <link>http://localhost:1313/posts/math-typesetting/</link>
-      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/math-typesetting/</guid>
-      
-      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using
-&lt;a href=&#34;https://github.com/hugo-sid/hugo-blog-awesome/blob/main/layouts/partials/helpers/katex.html&#34;&gt;third party JavaScript libraries&lt;/a&gt;.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Markdown Syntax Guide</title>
-      <link>http://localhost:1313/posts/markdown-syntax/</link>
-      <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/markdown-syntax/</guid>
-      
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Rich Content</title>
-      <link>http://localhost:1313/posts/rich-content/</link>
-      <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/rich-content/</guid>
-      
-      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Placeholder Text</title>
-      <link>http://localhost:1313/posts/placeholder-text/</link>
-      <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/placeholder-text/</guid>
-      
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Emoji Support</title>
-      <link>http://localhost:1313/posts/emoji-support/</link>
-      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/emoji-support/</guid>
-      
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-      
-    </item>
-    
+    <language>ko-kr</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>http://localhost:1313/pages/about/</link>
@@ -94,16 +13,42 @@
       
       <guid>http://localhost:1313/pages/about/</guid>
       
-      <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;&gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/onebom/&#34;&gt;Linkedin&lt;/a&gt; | &lt;a href=&#34;https://github.com/onebom&#34;&gt;Github&lt;/a&gt; | &lt;a href=&#34;https://drive.google.com/file/d/11jslX4cBe-KtkTRY64JGxThTIWKiO_r7/view?usp=sharing&#34;&gt;CV&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;interested&#34;&gt;Interested&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yuin/goldmark&#34;&gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DL for Computer vision(and API like tensorflow, pytorch)&lt;/li&gt;
+&lt;li&gt;Generative Models(Diffusion)&lt;/li&gt;
+&lt;li&gt;Linear Algebra &amp;amp; Probability for Deep Learning&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;</description>
+&lt;h3 id=&#34;vitæ&#34;&gt;Vitæ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MIDAS, Researcher (2024.02~)&lt;/li&gt;
+&lt;li&gt;Krafton Jungle (2022.10~2023.3)&lt;/li&gt;
+&lt;li&gt;MMMIL, Research scientist (2021.2~2022.5)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;research-portfolio&#34;&gt;Research Portfolio&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/DNA&#34;&gt;DNA 2022&lt;/a&gt;&lt;br&gt;
+Automatic injection controller Web Service with YoloV4 fluid detection.
+&lt;ul&gt;
+&lt;li&gt;2022 창의혁신 DNA 산학협력 연구 프로젝트 공학혁신상 수상&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/Malocclusion_RestAPI/tree/main&#34;&gt;Deep Learning based Malocclusion classification with distance of molar relationships 2021&lt;/a&gt;&lt;br&gt;
+Classification malocclusion using pseudo multi-label
+&lt;ul&gt;
+&lt;li&gt;2021 춘계 대한의용생체공학회 초록 게재 및 특허 출원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/3rd_Molar_to_canal&#34;&gt;Attention 3rd Molar to canal using CBAM 2021&lt;/a&gt;&lt;br&gt;
+three-step learning pipeline to classify 3rd Molar and lower tubular nerve contact&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;project-activities&#34;&gt;Project Activities&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/Deep_Learning_CV_Practice/tree/main/GenerativeAI_application&#34;&gt;GenerativeAI_application&lt;/a&gt; - private library for generative model (Pytorch)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/NowMSM_AI&#34;&gt;NowMeSeeMe&lt;/a&gt; - Application for emotional monitoring and psychological counseling using avatar (Tensorflow, Unity)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/BiamIO&#34;&gt;BiamIO&lt;/a&gt; - snake game application based DL hand detection (Vue, Flask, nodeJS)&lt;/li&gt;
+&lt;/ul&gt;</description>
       
     </item>
     

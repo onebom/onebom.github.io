@@ -44,21 +44,22 @@ theme = "hugo-blog-awesome"
   weight = 1
 
   [Languages.ko.menu]
-  [[Languages.ko.menu.main]]
-    pageRef="/"
-    name = '홈'
-    url = '/'
-    weight = 10
-  [[Languages.ko.menu.main]]
-    pageRef="posts"
-    name = '블로그'
-    url = '/posts/'
-    weight = 20
+  #[[Languages.ko.menu.main]]
+  #  pageRef="/"
+  #  name = 'Home'
+  #  url = '/'
+  #  weight = 10
   [[Languages.ko.menu.main]]
     pageRef="about"
-    name = '소개'
+    name = 'about'
     url = '/about/'
+    weight = 20
+  [[Languages.ko.menu.main]]
+    pageRef="posts"
+    name = 'Posts'
+    url = '/posts/'
     weight = 30
+  
 
 [Languages.ko.params]
   sitename = "Awesome hugo blog"
@@ -73,9 +74,11 @@ theme = "hugo-blog-awesome"
 
 [Languages.ko.params.author]
   avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
-  intro = "Awesome hugo blog"
+  intro = "Welcome to Onebom's blog"
   name = "Sidharth R"
-  description = "A fast, minimalistic Hugo theme with light and dark mode support, for running a personal site or blog."
+  description = """안녕하세요👋 현재 MIDAS에서 석사연구원으로 video generation을 연구하고 있습니다.
+Computer vision, Generative model, Diffusion등의 주제를 연구하며 알게된 사실과 경험을 
+공유하려고 합니다:) """
 
 # Allow to override webmanifest options
 [Languages.ko.params.webmanifest]
@@ -94,7 +97,7 @@ theme = "hugo-blog-awesome"
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/hugo-sid"
+url = "https://github.com/onebom"
 
 [[params.socialIcons]]
 name = "twitter"

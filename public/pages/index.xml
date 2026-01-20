@@ -5,7 +5,7 @@
     <link>http://localhost:1313/pages/</link>
     <description>Recent content in Pages on Awesome Hugo blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language><atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko-kr</language><atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>http://localhost:1313/pages/about/</link>
@@ -13,16 +13,42 @@
       
       <guid>http://localhost:1313/pages/about/</guid>
       
-      <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;&gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/onebom/&#34;&gt;Linkedin&lt;/a&gt; | &lt;a href=&#34;https://github.com/onebom&#34;&gt;Github&lt;/a&gt; | &lt;a href=&#34;https://drive.google.com/file/d/11jslX4cBe-KtkTRY64JGxThTIWKiO_r7/view?usp=sharing&#34;&gt;CV&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;interested&#34;&gt;Interested&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yuin/goldmark&#34;&gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DL for Computer vision(and API like tensorflow, pytorch)&lt;/li&gt;
+&lt;li&gt;Generative Models(Diffusion)&lt;/li&gt;
+&lt;li&gt;Linear Algebra &amp;amp; Probability for Deep Learning&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;</description>
+&lt;h3 id=&#34;vitæ&#34;&gt;Vitæ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MIDAS, Researcher (2024.02~)&lt;/li&gt;
+&lt;li&gt;Krafton Jungle (2022.10~2023.3)&lt;/li&gt;
+&lt;li&gt;MMMIL, Research scientist (2021.2~2022.5)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;research-portfolio&#34;&gt;Research Portfolio&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/DNA&#34;&gt;DNA 2022&lt;/a&gt;&lt;br&gt;
+Automatic injection controller Web Service with YoloV4 fluid detection.
+&lt;ul&gt;
+&lt;li&gt;2022 창의혁신 DNA 산학협력 연구 프로젝트 공학혁신상 수상&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/Malocclusion_RestAPI/tree/main&#34;&gt;Deep Learning based Malocclusion classification with distance of molar relationships 2021&lt;/a&gt;&lt;br&gt;
+Classification malocclusion using pseudo multi-label
+&lt;ul&gt;
+&lt;li&gt;2021 춘계 대한의용생체공학회 초록 게재 및 특허 출원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/3rd_Molar_to_canal&#34;&gt;Attention 3rd Molar to canal using CBAM 2021&lt;/a&gt;&lt;br&gt;
+three-step learning pipeline to classify 3rd Molar and lower tubular nerve contact&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;project-activities&#34;&gt;Project Activities&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/Deep_Learning_CV_Practice/tree/main/GenerativeAI_application&#34;&gt;GenerativeAI_application&lt;/a&gt; - private library for generative model (Pytorch)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/NowMSM_AI&#34;&gt;NowMeSeeMe&lt;/a&gt; - Application for emotional monitoring and psychological counseling using avatar (Tensorflow, Unity)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/onebom/BiamIO&#34;&gt;BiamIO&lt;/a&gt; - snake game application based DL hand detection (Vue, Flask, nodeJS)&lt;/li&gt;
+&lt;/ul&gt;</description>
       
     </item>
     

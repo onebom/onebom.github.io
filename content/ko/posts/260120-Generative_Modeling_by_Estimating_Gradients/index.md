@@ -1,7 +1,7 @@
 ---
 title: Generative Modeling by Estimating Gradients of the Data Distribution
-date: 2023-02-11
-author: Hugo Authors
+date: 2026-01-20
+author: onebom
 description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.
 isStarred: true
 draft: false

@@ -1,0 +1,93 @@
+//////////////// 1. Light Colors /////////////////
+$text-base-color: #434648;
+$text-link-blue: #003fff;
+$text-link-blue-active: #0036c7;
+$bloquote-border: #c4c8cc;
+$blockquote-text: #525b66;
+$inline-code-text: #333638;
+$inline-code-bg: #d8dbe2;
+$toc-bg: #edecec;
+$go-top-bg: #dfe0e397;
+$go-top-bg-hover: #dfe0e3;
+
+$black: #08916a;
+$light: #ececec;
+$smoke: #90A7B2;
+$gray: #403f53;
+$white: #f6f6f6;
+
+//////////////// 2. Dark Colors /////////////////
+$dark-text-base-color: #babdc4;
+$dark-text-link-blue: #8BADC1;
+$dark-text-link-blue-active: #8BADC1;
+$dark-bloquote-border: #4a4d56;
+$dark-blockquote-text: #9b9ba3;
+$dark-inline-code-text: #c2c4ca;
+$dark-inline-code-bg: #2d2d2d;
+$dark-toc-bg: #102a44;
+$dark-go-top-bg: #676767b3;
+$dark-go-top-bg-hover: #676767;
+
+
+$dark-black: #011627d6;
+$dark-white: #2fe6b2e5;
+$dark-light: #1d3b53;
+$dark-smoke: #0d486e;
+$dark-gray: #d6deeb;
+
+//////////////// 3. Fonts preferences /////////////////
+$sans-family: 'IsYun', Roboto, sans-serif;
+$mono-family: Consolas, monospace;
+$base-font-size: 16px;
+$medium-font-size: $base-font-size * 0.938;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.85;
+
+// Font weightf
+// $light-weight: 300; // uncomment if necessary
+$normal-weight: 400;
+$bold-weight: 700;
+// $black-weight: 900; // uncomment if necessary
+
+//////////////// 4.Responsive design (media queries) /////////////////
+$wide-size: 890px;
+$narrow-size: 890px;
+
+// Padding unit
+$spacing-full: 30px;
+$spacing-half: $spacing-full / 2;
+
+// Screen sizes
+$on-mobile: 768px;
+$on-tablet: 769px;
+$on-desktop: 1024px;
+$on-widescreen: 1152px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin relative-font-size($ratio) {
+    font-size: $base-font-size * $ratio;
+}
+
+//////////////// 5. Import all sass files /////////////////
+
+@import "fonts";
+@import "base";
+@import "navbar";
+@import "layout";
+@import "post";
+@import "code";
+
+@import "tableOfContent";
+@import "miscellaneous";
+@import "dark";
+@import "listpage";
+@import "custom";
+
+{{ with .Site.Params.goToTop }}
+@import "goToTop";
+{{ end }}

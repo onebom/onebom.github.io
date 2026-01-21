@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="ko-kr"><head><meta charset="utf-8">
+<html lang="ko-kr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">Generative Modeling by Estimating Gradients of the Data Distribution | Onebom</title>
-<meta property="og:title" content="Generative Modeling by Estimating Gradients of the Data Distribution | Onebom" />
-<meta name="twitter:title" content="Generative Modeling by Estimating Gradients of the Data Distribution | Onebom" />
-<meta itemprop="name" content="Generative Modeling by Estimating Gradients of the Data Distribution | Onebom" />
-<meta name="application-name" content="Generative Modeling by Estimating Gradients of the Data Distribution | Onebom" />
+<title itemprop="name">Score-based generative modeling | Onebom</title>
+<meta property="og:title" content="Score-based generative modeling | Onebom" />
+<meta name="twitter:title" content="Score-based generative modeling | Onebom" />
+<meta itemprop="name" content="Score-based generative modeling | Onebom" />
+<meta name="application-name" content="Score-based generative modeling | Onebom" />
 <meta property="og:site_name" content="Awesome hugo blog" />
 
-<meta name="description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
-<meta itemprop="description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements." />
-<meta property="og:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements." />
-<meta name="twitter:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements." />
+<meta name="description" content="Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution">
+<meta itemprop="description" content="Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution" />
+<meta property="og:description" content="Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution" />
+<meta name="twitter:description" content="Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution" />
 
 <meta property="og:locale" content="ko-kr" />
 <meta name="language" content="ko-kr" />
 
-  <link rel="alternate" hreflang="ko" href="https://hba.sid.one/posts/260120-generative_modeling_by_estimating_gradients/" title="Korean" />
+  <link rel="alternate" hreflang="ko" href="http://localhost:1313/posts/260120-generative_modeling_by_estimating_gradients/" title="Korean" />
 
 
 
@@ -31,7 +31,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:article:published_time" content=2026-01-20T00:00:00Z />
     <meta property="article:published_time" content=2026-01-20T00:00:00Z />
-    <meta property="og:url" content="https://hba.sid.one/posts/260120-generative_modeling_by_estimating_gradients/" />
+    <meta property="og:url" content="http://localhost:1313/posts/260120-generative_modeling_by_estimating_gradients/" />
 
     
     <meta property="og:article:author" content="Sidharth R" />
@@ -46,14 +46,14 @@
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "headline": "Generative Modeling by Estimating Gradients of the Data Distribution",
+        "headline": "Score-based generative modeling",
         "author": {
         "@type": "Person",
         "name": ""
         },
         "datePublished": "2026-01-20",
-        "description": "Sample article showcasing basic Markdown syntax and formatting for HTML elements.",
-        "wordCount":  491 ,
+        "description": "Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution",
+        "wordCount":  1214 ,
         "mainEntityOfPage": "True",
         "dateModified": "2026-01-20",
         "image": {
@@ -71,10 +71,10 @@
 <meta name="generator" content="Hugo 0.154.5">
 
     
-    <meta property="og:url" content="https://hba.sid.one/posts/260120-generative_modeling_by_estimating_gradients/">
+    <meta property="og:url" content="http://localhost:1313/posts/260120-generative_modeling_by_estimating_gradients/">
   <meta property="og:site_name" content="Onebom">
-  <meta property="og:title" content="Generative Modeling by Estimating Gradients of the Data Distribution">
-  <meta property="og:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+  <meta property="og:title" content="Score-based generative modeling">
+  <meta property="og:description" content="Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -85,23 +85,38 @@
     
     
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Generative Modeling by Estimating Gradients of the Data Distribution">
-  <meta name="twitter:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+  <meta name="twitter:title" content="Score-based generative modeling">
+  <meta name="twitter:description" content="Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution">
 
 
     
 
-    <link rel="canonical" href="https://hba.sid.one/posts/260120-generative_modeling_by_estimating_gradients/">
-    <link href="/style.min.2c7a1a57059a3ac65bc1e05d5f5da632b09e2a5dd69cfb82b270adf3ff476787.css" rel="stylesheet">
+    <link rel="canonical" href="http://localhost:1313/posts/260120-generative_modeling_by_estimating_gradients/">
+    <link href="/style.min.c10134284421897f0b47061790fed5c37dd7760da084472dd7bea21f3133c889.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=1768909897">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png?v=1768909897">
-    <link rel="shortcut icon" href="/favicon.ico?v=1768909897">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=1768992250">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png?v=1768992250">
+    <link rel="shortcut icon" href="/favicon.ico?v=1768992250">
 
-    
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" crossorigin="anonymous" />
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha512-LQNxIMR5rXv7o+b1l8+N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r+EFLLCyA=="
+    crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous" onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });"></script>
+
     
       <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,11 +126,11 @@
 </head>
 <body data-theme = "dark" class="notransition">
 
-<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+<script src="/js/theme.js"></script>
 
 <div class="navbar" role="navigation">
     <nav class="menu" aria-label="Main Navigation">
-        <a href="https://hba.sid.one/" class="logo">
+        <a href="http://localhost:1313/" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
 stroke-linejoin="round" class="feather feather-home">
@@ -169,7 +184,7 @@ stroke-linejoin="round" class="feather feather-home">
     <main class="page-content" aria-label="Content">
         <article>
             <header class="header">
-                <h1 class="header-title">Generative Modeling by Estimating Gradients of the Data Distribution</h1>
+                <h1 class="header-title">Score-based generative modeling</h1>
                 
                 
                 
@@ -184,199 +199,140 @@ stroke-linejoin="round" class="feather feather-home">
         <summary><b>Table of Contents</b></summary>
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#headings">Headings</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#h2">H2</a>
-      <ul>
-        <li><a href="#h3">H3</a>
-          <ul>
-            <li><a href="#h4">H4</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#paragraph">Paragraph</a></li>
-    <li><a href="#image">Image</a></li>
-    <li><a href="#blockquotes">Blockquotes</a>
-      <ul>
-        <li><a href="#blockquote-without-attribution">Blockquote without attribution</a></li>
-        <li><a href="#blockquote-with-attribution">Blockquote with attribution</a></li>
-      </ul>
-    </li>
-    <li><a href="#tables">Tables</a>
-      <ul>
-        <li><a href="#markdown-within-tables">Markdown within tables</a></li>
-      </ul>
-    </li>
-    <li><a href="#code-blocks">Code Blocks</a>
-      <ul>
-        <li><a href="#code-block-with-backticks">Code block with backticks</a></li>
-        <li><a href="#code-block-indented-with-four-spaces">Code block indented with four spaces</a></li>
-        <li><a href="#code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</a></li>
-        <li><a href="#inline-code">Inline code</a></li>
-      </ul>
-    </li>
-    <li><a href="#list-types">List Types</a>
-      <ul>
-        <li><a href="#ordered-list">Ordered List</a></li>
-        <li><a href="#unordered-list">Unordered List</a></li>
-        <li><a href="#nested-list">Nested list</a></li>
-      </ul>
-    </li>
-    <li><a href="#other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#the-score-function-score-based-models-and-score-matching">The score function, score-based models, and score matching</a></li>
+    <li><a href="#langevin-dynamics">Langevin dynamics</a></li>
+    <li><a href="#naive-score-based-generative-modeling-and-its-pitfalls">Naive score-based generative modeling and its pitfalls</a></li>
+    <li><a href="#score-based-generative-modeling-with-multiple-noise-perturbations">Score-based generative modeling with multiple noise perturbations</a></li>
+    <li><a href="#score-based-generative-modeling-with-stochastic-differential-equations-sdes-">Score-based generative modeling with stochastic differential equations (SDEs) ⭐️</a></li>
+    <li><a href="#connection-to-diffusion-models-and-others">Connection to diffusion models and others</a></li>
+    <li><a href="#concluding-remarks">Concluding remarks</a></li>
   </ul>
 </nav>
     </details>
             <div class="page-content">
-                <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
-<h2 id="headings">Headings</h2>
-<p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
-<h1 id="h1">H1</h1>
-<h2 id="h2">H2</h2>
-<h3 id="h3">H3</h3>
-<h4 id="h4">H4</h4>
-<h5 id="h5">H5</h5>
-<h6 id="h6">H6</h6>
-<h2 id="paragraph">Paragraph</h2>
-<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
-<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
-<h2 id="image">Image</h2>
-<p>You can use the following syntax to include an image. Path of the image should be relative to the <code>index.md</code> file.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Landscape</span>](<span class="na">1.jpg</span>)
-</span></span></code></pre></div><p><img src="1.jpg" alt="Landscape"></p>
-<p>You can also include image from external sources.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Image</span>](<span class="na">https://source.unsplash.com/random/600x400/?tech</span>)
-</span></span></code></pre></div><p><img src="https://source.unsplash.com/random/600x400/?tech" alt="Image"></p>
-<h2 id="blockquotes">Blockquotes</h2>
-<p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p>
-<h3 id="blockquote-without-attribution">Blockquote without attribution</h3>
-<blockquote>
-<p>You can use Markdown syntax within a blockquote, like <strong>bold</strong>,  <em>italics</em>, <a href="https://gohugo.io/">links</a>, <code>code</code>.</p>
-</blockquote>
-<h3 id="blockquote-with-attribution">Blockquote with attribution</h3>
-<blockquote>
-<p>Don&rsquo;t communicate by sharing memory, share memory by communicating.<br>
-— <cite>Rob Pike<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite></p>
-</blockquote>
-<h2 id="tables">Tables</h2>
-<p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports them out-of-the-box.</p>
-<table>
-  <thead>
-      <tr>
-          <th>Name</th>
-          <th>Age</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Bob</td>
-          <td>27</td>
-      </tr>
-      <tr>
-          <td>Alice</td>
-          <td>23</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="markdown-within-tables">Markdown within tables</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Italics</th>
-          <th>Bold</th>
-          <th>Code</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><em>italics</em></td>
-          <td><strong>bold</strong></td>
-          <td><code>code</code></td>
-      </tr>
-  </tbody>
-</table>
-<h2 id="code-blocks">Code Blocks</h2>
-<h3 id="code-block-with-backticks">Code block with backticks</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h3 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h3>
-<pre><code>&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Test&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h3 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
-<h3 id="inline-code">Inline code</h3>
-<p>Use the backtick to refer to a <code>variable</code> within a sentence.</p>
-<h2 id="list-types">List Types</h2>
-<h3 id="ordered-list">Ordered List</h3>
-<ol>
-<li>First item</li>
-<li>Second item with some <code>code</code> in it</li>
-<li>Third item</li>
-</ol>
-<h3 id="unordered-list">Unordered List</h3>
-<ul>
-<li>List item</li>
-<li>Another item with some <code>code</code> in it</li>
-<li>And another item</li>
-</ul>
-<h3 id="nested-list">Nested list</h3>
-<ul>
-<li>Fruit
-<ul>
-<li>Apple</li>
-<li>Orange</li>
-<li>Banana</li>
-</ul>
-</li>
-<li>Dairy
-<ul>
-<li>Milk</li>
-<li>Cheese</li>
-</ul>
-</li>
-</ul>
-<h2 id="other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</h2>
-<p><abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.</p>
-<p>H<sub>2</sub>O</p>
-<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
-<p>Press <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd> to end the session.</p>
-<p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.</p>
-<div class="footnotes" role="doc-endnotes">
+                <p><a href="https://yang-song.net/blog/2021/score/">Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution</a>을 번역한 글입니다.
+번역 과정에서 일부 의역을 포함했습니다.</p>
 <hr>
+<h2 id="introduction">Introduction</h2>
+<p>generative modeling 기술은 &ldquo;어떻게 probability distribution&quot;을 나타내는 지로 두 그룹으로 나눌 수 있습니다.</p>
 <ol>
-<li id="fn:1">
-<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li>
+<p><strong>likelihood-based models</strong><br>
+distribution의 P.D.F(probability density function)또는 P.M.F(probability mass function)을 maximum likelihood를 근사하는 방식으로 학습하는 방식.</p>
+<ul>
+<li>autoregressive models, normalizing flow models, energy-based model(EBMs), variational auto-enocder(VAEs) 모델들이 보통 likelihood-based model 방식입니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>implicit generative models</strong><br>
+model의 sampling process를 사용해 probability distribution을 implicit하게 표현하는 방식.</p>
+<ul>
+<li>가장 대표적인 예는 generative adversarial network(GANs)입니다. random gaussian vector를 Neural network로 변환하여 데이터 분포에서 새로운 샘플을 합성합니다.</li>
+</ul>
 </li>
 </ol>
-</div>
+<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/1.png" alt="1"><em>Bayesian networks, Markov random fields (MRF), autoregressive models, and normalizing flow models are all examples of likelihood-based models. All these models represent the probability density or mass function of a distribution</em></p>
+<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/2.png" alt="2"><em>GAN is an example of implicit models. It implicitly represents a distribution over all objects that can be produced by the generator networks</em></p>
+<p>근데, 두 모델 전부 확실한 limitation을 가집니다.<br>
+likelihood-based model은 likelihood를 계산하는 tractable normalizing constant를 보장하기 위해서 모델 아키텍처에 대한 강한 restriction를 필요로하거나, maximum likelihood를 근사하기 위한 간접 objective에 의존해야합니다.
+반면, implicit generative model은 종종 adverarial training을 필요로 하며, 이 방식은 학습 안정성이 너무 낮고 mode collapse를 발생시킬 수 있습니다.</p>
+<p>따라서 이 블로그 포스트에서는, 위 한계들을 우회할 수 있는 probability distribution 표현 방식을 소개하려고 합니다.
+key idea는 <em>Log P.D.F의 gradient</em>인 <strong>score function</strong>를 modeling하는 것입니다.
+<strong>score-based model</strong>은 tractable normalizing constance를 필요로 하지 않고, <strong>score matching</strong>을 통해서 직접적으로 학습이 가능합니다.</p>
+<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/3.jpg" alt="3"><em>Score function (the vector field) and density function (contours) of a mixture of two Gaussians</em></p>
+<p>score-based model은 많은 downstream task(image generation, audio synthesis, shape generation, muision generation 등)에서 state-of-the-art를 달성했습니다.
+또한, <a href="">normalizing flow model</a>와 개념적으로 연결되어 있어 정확한 likelihood computation과 representation learning이 가능합니다.
+score modeling&amp;estimating은 inverse problem 해결을 용이하게 합니다(with applications such as image inpainting[18, 21] , image colorization [21] , compressive sensing, and medical image reconstruction (e.g., CT, MRI)).</p>
+<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/4.jpg" alt="4"><em>Score function (the vector field) and density function (contours) of a mixture of two Gaussians.</em></p>
+<p>이 포스트에서 score-based generative modeling에 대한 motivation과 intuition, 뿐만아니라 basic concepts, properties을 보이고자 합니다.</p>
+<h2 id="the-score-function-score-based-models-and-score-matching">The score function, score-based models, and score matching</h2>
+<p>data distribution $p(x)$를 따르면서 i.i.d((independent and identically distributed)) data point로 구성된 dataset $ \lbrace x_1,x_2, \cdots, x_N \rbrace $이 주어진다고 가정하겠습니다.
+generative modeling의 목표는 data distribution에 model을 fitting함으로써, 학습된 분포로부터 sampling하여 새로운 data point를 합성하는 것입니다.</p>
+<p>그러한 generative model을 만들기 위해서는, 우선 probability distribution을 represent하는 방식이 필요합니다.
+likelihood-based model에서 사용가능한 한가지는 방법으로는, P.D.F 또는 P.M.F를 직접적으로 modeling하는 것입니다.
+학습 가능한 parameter $\theta$로 parameterized된 실수 함수 $f_{\theta}(x) \in \mathbb{R}$를 가정해 보겠습니다<br>
+그럼 p.d.f를 다음과 같이 정의할 수 있습니다;</p>
+<p>$$
+p_{\theta}(x) = \frac{e^{-f_{\theta}(x)}}{Z_\theta}
+$$</p>
+<p>$Z_{\theta}&gt;0$는 $\theta$에 의존하는 normalizing constant이므로 $\int p_{\theta}(x) \ d\mathbf{x}=1$가 됩니다. 여기서 f_{\theta}(x)는 unnormalized probabilistic model, 또는 energy-based model이라고 합니다.</p>
+<p>우리는 $p_{\theta}(x)$를 data의 log-likelihood를 최대화함으로써 학습할 수 있습니다;</p>
+<p>$$
+\max_{\theta} \sum^N_{i=1} \log{p_{\theta}(\mathbf{x}_i)}
+$$</p>
+<p>그러나, 위 수식은 $p_{\theta}(x)$가 normalized probability density function여야 합니다.
+이렇게되면, $p_{\theta}(x)$를 연산하기 위해서 normalizing constant인 $Z_{\theta}$를 알아야만 하며, 이는 일반적인 $f_{\theta}(x)$에 대해서 다루기 어려운 연산량을 요구하게 됩니다.
+따라서, maximum likelihood 학습이 가능하도록 하기 위해서는 모델 아키텍처를 제한하여(e.g. causal convolutions in autoregressive mdoels, inverible networks in normalizing flow models) $Z_{\theta}$를 구할 수 있도록 하거나, 연산량이 엄청 비싸더라도 normalizing constant를 근사해야 했습니다(e.g. variational inference in VAEs, or MCMC sampling used in contrastive divergence).</p>
+<p>근데!, densitiy function 대신 score function을 모델링함으로써, 우리는 다루기 어려운 normalizing constants $Z_{\theta}$의 어려움을 피할 수 있습니다.<br>
+distribution $p(x)$의 <strong>score function</strong>은 다음처럼 정의할 수 있습니다;</p>
+<p>$$
+\begin{equation} \nabla_\mathbf{x} \log p(\mathbf{x}), \notag \end{equation}
+$$</p>
+<p>그리고, socre function을 학습하는 model을 <strong>score-based model</strong>이라고 부르며, $s_{\theta}(x)$로 씁니다.
+score-based model은 $s_\theta(x) \approx \nabla_{\mathbf{x}} \log{p(\mathbf{x})}$를 학습하고, normalizing constant에 대한 고려 없이도 parameterzied 가능합니다.
+예를 들어, 아래 수식처럼 우리는 score-based model을 energy-based model(수식1)로 파라미터화 할 수 있습니다;</p>
+<br>
+$$
+\begin{equation} \mathbf{s}_\theta (\mathbf{x}) = \nabla_{\mathbf{x}} \log p_\theta (\mathbf{x} ) = -\nabla_{\mathbf{x}} f_\theta (\mathbf{x}) - \underbrace{\nabla_\mathbf{x} \log Z_\theta}_{=0} = -\nabla_\mathbf{x} f_\theta(\mathbf{x}). \end{equation}
+$$ 
+<br> 
+<p>여기서 중요한건, score-based model $s_\theta (x)$는 normalizing constance $Z_\theta$와 독립이라는 점입니다!</p>
+<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/5.gif" alt="5"><em>Parameterizing probability density functions. No matter how you change the model family and parameters, it has to be normalized (area under the curve must integrate to one).</em></p>
+<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/6.gif" alt="6"><em>Parameterizing score functions. No need to worry about normalization.</em></p>
+<p>likelihood-based model들과 유사하게도, 우리는 모델과 실제 data distribution 사이 Fisher divergence를 최소화함으로써 score-based model을 학습할 수 있습니다.</p>
+<br>
+$$
+\begin{equation} \mathbb{E}_{p(\mathbf{x})}[\| \nabla_\mathbf{x} \log p(\mathbf{x}) - \mathbf{s}_\theta(\mathbf{x}) \|_2^2] \end{equation}
+$$
+<br>
+<p>직관적으로 설명하자면, Fisher divergence는 ground-truth data score와 score-based model 사이 $\ell_2$ distance의 제곱값을 비교합니다.
+하지만, divergence를 직접 연산하는 것은 unknown data score $\nabla_\mathbf{x} \log p(\mathbf{x})$를 필요로 하기 때문에 불가능합니다.
+다행히도, score matching이라는 방법들이 존재하며, 이 방법들은 ground-trurh data score에 대해서 모르더라도 Fisher divergence를 최소화합니다.
+Score matching의 objectives는 dataset에서 직접 추정될 수 있으며, stochastic gradient descent를 통해 최적화될 수 있습니다.
+이는 normalizing constant를 알고서 likelihood-based model을 학습시키기 위한 log-likelihood objective와 유사합니다.
+이는 알려진 정규화 상수를 가진 확률 기반 모델을 훈련시키기 위한 로그 우도 목표와 유사합니다.
+우리는 <strong>adversarial optimization 없이</strong> score matching objective를 최소화하여 score-based model을 학습할 수 있습니다.</p>
+<p>게다가, score matching objective를 사용하는 것은 우리에게 상당한 modeling flexibility를 줍니다.
+Fisher divergence는 $s_\theta (x)$가 normalized distribution의 실제 score function일 필요가 없습니다. 단순히 ground-truth data score와 score-based modeldml $\ell_2$ distance를 비교할 뿐입니다.
+실제로는, score-based model이 유일하게 필요로 하는것은 입력 및 출력의 차원이 동일한 vector-value function입니다.</p>
+<p>간단히 요약하자면, score function을 모델링하여 분포를 나타낼 수 있으며, score matching을 통해 score-based model의 free-from 아키텍처를 학습시켜 score function을 추정할 수 있습니다.</p>
+<h2 id="langevin-dynamics">Langevin dynamics</h2>
+<p>score-based model $s_\theta(x) \approx \nabla_x \log p(x)$를 학습시키고 나면, 우리는 <strong>Langevin dynamics</strong>라 불리는 iterative procedure를 사용해서 모델로부터 sample을 얻을 수 있습니다.</p>
+<p>Langevin dynamics는 score function $\nabla_\mathbf{x} \log p(\mathbf{x})$만을 사용해서 distribution $p(x)$로부터 sampling하기 위한 MCMC procedure를 제공합니다.
+구체적으로, 임의의 prior distribution $\mathbf{x}_0 \sim \pi(\mathbf{x})$로부터 chain을 초기화 한 다음 아래 과정을 반복합니다;</p>
+<br>
+$$
+\begin{align} \mathbf{x}_{i+1} \gets \mathbf{x}_i + \epsilon \nabla_\mathbf{x} \log p(\mathbf{x}) + \sqrt{2\epsilon}~ \mathbf{z}_i, \quad i=0,1,\cdots, K, \end{align}
+$$
+<br>
+<p>$z_i$는 가우시안 분포를 따릅니다; $\mathbf{z}_i \sim \mathcal{N}(0, I)$.
+$\epsilon \to 0$이고 $K \to \infty$ 일 때, $x_K$는 몇 regularity condition을 따르며 위 절차를 통해 $p(x)$로 수렴합니다. 실제로, $\epsilon$이 충분히 작고 $K$가 충분히 큰 경우 오차는 무시될정도로 작아집니다.</p>
+<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/7.gif" alt="7"><em>Using Langevin dynamics to sample from a mixture of two Gaussians.</em></p>
+<p>Langevin dynamics는 $\nabla_\mathbf{x} \log p(\mathbf{x})$를 통해서 $p(x)$에 접근한다는 것을 기억하십시오.
+$s_\theta(x) \approx \nabla_x \log p(x)$이기에, 우리는 score-based model $s_\theta(x)$를 MCMC 수식에 대입하여 sample을 생성할 수 있습니다.</p>
+<h2 id="naive-score-based-generative-modeling-and-its-pitfalls">Naive score-based generative modeling and its pitfalls</h2>
+<p>이제서야 우리는 어떻게 &ldquo;score-based model이 score matching으로 학습되는 지&quot;와 &ldquo;Lagenvin dynamics를 통해 sample을 생성할 수 있는지&quot;에 대해서 알게 되었습니다.
+그러나, 실제로 이 navie한 방식을 적용하기에는 아직 한계가 있습니다.
+지금까지는 주목하지 못했던 score matching방식의 함정에 대해서 이야기 해보겠습니다.</p>
+<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/8.jpg" alt="8"><em>Score-based generative modeling with score matching + Langevin dynamics.</em></p>
+<p>주요 문제점은 score matching objective를 연산하기 위한 data point가 충분하지 않은 low density인 영역에서 score function을 추정하는 것은 부정확할 수 밖에 없다는 사실 입니다.</p>
+<p>score matching은 fisher divergence를 최소화하는데 하는 function입니다.
+따라서, true data score function과 score-based model 사이 $\ell_2$ 차이값은 $p(x)$에 의해 가중되기 떄문에 $p(x)$가 작은 low density regions에서는 값이 대부분 무시될 것이기 떄문에 위와 같은 문제가 발생합니다.</p>
+<br>
+$$
+\mathbb{E}_{p(\mathbf{x})}[\| \nabla_\mathbf{x} \log p(\mathbf{x}) - \mathbf{s}_\theta(\mathbf{x}) \|_2^2] = \int p(\mathbf{x}) \| \nabla_\mathbf{x} \log p(\mathbf{x}) - \mathbf{s}_\theta(\mathbf{x}) \|_2^2 \mathrm{d}\mathbf{x}.
+$$
+<br>
+<p>이러한 문제는 아래 그림에서 볼 수 있듯이 저조한 결과를 보이게 됩니다.</p>
+<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/9.jpg" alt="9"><em>Estimated scores are only accurate in high density regions.</em></p>
+<p>Langevie dynamics로 sampling할 때, high dimenstional space에 놓여있는 data에 대해서 initial sample은 low density region에서 시작할 가능성이 매우 높습니다.
+따라서 부정확한 score-based model을 사용하면 MCMC sampling 과정의 시작부터 Langevin dynamics가 탈선하여 데이터를 대표하는 high quality를 생성하지 못하게 됩니다.</p>
+<h2 id="score-based-generative-modeling-with-multiple-noise-perturbations">Score-based generative modeling with multiple noise perturbations</h2>
+<h2 id="score-based-generative-modeling-with-stochastic-differential-equations-sdes-">Score-based generative modeling with stochastic differential equations (SDEs) ⭐️</h2>
+<h2 id="connection-to-diffusion-models-and-others">Connection to diffusion models and others</h2>
+<h2 id="concluding-remarks">Concluding remarks</h2>
+
             </div>
         </article></main>
 </div>
@@ -433,7 +389,7 @@ stroke-linejoin="round" class="feather feather-home">
 
 
     
-    <script src="https://hba.sid.one/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+    <script async src="http://localhost:1313/js/main.js" ></script>
 
     
 

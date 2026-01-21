@@ -58,7 +58,8 @@
     figcaption {
       margin-top: 5px;
       font-style: italic;
-      font-size: $small-font-size;
+      font-size: $base-font-size * 0.15;
+      text-align: center;
     }
   }
 

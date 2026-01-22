@@ -10,8 +10,8 @@ math: true
 [Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.net/blog/2021/score/)을 번역한 글입니다.
 번역 과정에서 일부 의역을 포함했습니다.
 
----
-## Introduction
+## 1.Introduction
+
 generative modeling 기술은 "어떻게 probability distribution"을 나타내는 지로 두 그룹으로 나눌 수 있습니다.
 1. **likelihood-based models**   
   distribution의 P.D.F(probability density function)또는 P.M.F(probability mass function)을 maximum likelihood를 근사하는 방식으로 학습하는 방식.
@@ -21,9 +21,17 @@ generative modeling 기술은 "어떻게 probability distribution"을 나타내�
   model의 sampling process를 사용해 probability distribution을 implicit하게 표현하는 방식.
     - 가장 대표적인 예는 generative adversarial network(GANs)입니다. random gaussian vector를 Neural network로 변환하여 데이터 분포에서 새로운 샘플을 합성합니다. 
 
-![1](1.png)*Bayesian networks, Markov random fields (MRF), autoregressive models, and normalizing flow models are all examples of likelihood-based models. All these models represent the probability density or mass function of a distribution*
+<br>
 
-![2](2.png)*GAN is an example of implicit models. It implicitly represents a distribution over all objects that can be produced by the generator networks*
+<img src="1.png" width="1000"/>
+<figcaption>[Bayesian networks, Markov random fields (MRF), autoregressive models, and normalizing flow models are all examples of likelihood-based models. All these models represent the probability density or mass function of a distribution]</figcaption>
+
+<br>
+
+<img src="2.png" width="1000"/>
+<figcaption>[GAN is an example of implicit models. It implicitly represents a distribution over all objects that can be produced by the generator networks]</figcaption>
+
+<br>
 
 근데, 두 모델 전부 확실한 limitation을 가집니다.   
 likelihood-based model은 likelihood를 계산하는 tractable normalizing constant를 보장하기 위해서 모델 아키텍처에 대한 강한 restriction를 필요로하거나, maximum likelihood를 근사하기 위한 간접 objective에 의존해야합니다.
@@ -89,7 +97,6 @@ $$
 
 
 ![5](5.gif)*Parameterizing probability density functions. No matter how you change the model family and parameters, it has to be normalized (area under the curve must integrate to one).*
-
 
 ![6](6.gif)*Parameterizing score functions. No need to worry about normalization.*
 

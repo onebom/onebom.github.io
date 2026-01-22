@@ -33,7 +33,7 @@ theme = "hugo-blog-awesome"
     unsafe = true
 	[markup.tableOfContents]
 		startLevel = 2 # ToC starts from H2
-		endLevel = 4 # ToC ends at H4
+		endLevel = 3 # ToC ends at H4
 		ordered = false # generates <ul> instead of <ol>
 
 ############################## Korean language ################################

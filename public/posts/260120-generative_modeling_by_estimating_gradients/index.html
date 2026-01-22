@@ -92,13 +92,13 @@
     
 
     <link rel="canonical" href="http://localhost:1313/posts/260120-generative_modeling_by_estimating_gradients/">
-    <link href="/style.min.c10134284421897f0b47061790fed5c37dd7760da084472dd7bea21f3133c889.css" rel="stylesheet">
+    <link href="/style.min.0171aa43645e2b7dd8f559329b819b366155bbcb20c3d76a34f75f9e7d4b1f3a.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=1768992250">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png?v=1768992250">
-    <link rel="shortcut icon" href="/favicon.ico?v=1768992250">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=1769080949">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png?v=1769080949">
+    <link rel="shortcut icon" href="/favicon.ico?v=1769080949">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
     integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" crossorigin="anonymous" />
@@ -181,25 +181,17 @@ stroke-linejoin="round" class="feather feather-home">
 </div>
 
 <div class="wrapper post">
-    <main class="page-content" aria-label="Content">
-        <article>
-            <header class="header">
-                <h1 class="header-title">Score-based generative modeling</h1>
-                
-                
-                
-                <div class="post-meta">
-                    <time datetime="2026-01-20T00:00:00&#43;00:00" itemprop="datePublished"> 2026년 1월 20일 </time>
-                </div>
-                
-            </header>
-            
+
+    
+    <aside id="sticky-toc">
+        <h3 class="sticky-toc-title">Table of Contents</h3>
+        
     
     <details class="toc" ZgotmplZ>
         <summary><b>Table of Contents</b></summary>
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#1introduction">1.Introduction</a></li>
     <li><a href="#the-score-function-score-based-models-and-score-matching">The score function, score-based models, and score matching</a></li>
     <li><a href="#langevin-dynamics">Langevin dynamics</a></li>
     <li><a href="#naive-score-based-generative-modeling-and-its-pitfalls">Naive score-based generative modeling and its pitfalls</a></li>
@@ -210,11 +202,57 @@ stroke-linejoin="round" class="feather feather-home">
   </ul>
 </nav>
     </details>
+    </aside>
+    
+
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Score-based generative modeling</h1>
+                
+                    <p class="post-description">Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution</p>
+                
+                
+                <div class="post-meta">
+                    
+                        
+                        <time datetime="2026-01-20T00:00:00&#43;00:00" itemprop="datePublished"> 2026년 1월 20일 </time>
+                    
+                    
+                        <span class="post-reading-time">&nbsp; | &nbsp; 6 min read</span>
+                         
+                    
+                    <div class="in-content-toc">
+                        
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1introduction">1.Introduction</a></li>
+    <li><a href="#the-score-function-score-based-models-and-score-matching">The score function, score-based models, and score matching</a></li>
+    <li><a href="#langevin-dynamics">Langevin dynamics</a></li>
+    <li><a href="#naive-score-based-generative-modeling-and-its-pitfalls">Naive score-based generative modeling and its pitfalls</a></li>
+    <li><a href="#score-based-generative-modeling-with-multiple-noise-perturbations">Score-based generative modeling with multiple noise perturbations</a></li>
+    <li><a href="#score-based-generative-modeling-with-stochastic-differential-equations-sdes-">Score-based generative modeling with stochastic differential equations (SDEs) ⭐️</a></li>
+    <li><a href="#connection-to-diffusion-models-and-others">Connection to diffusion models and others</a></li>
+    <li><a href="#concluding-remarks">Concluding remarks</a></li>
+  </ul>
+</nav>
+    </details>
+                    </div>
+                    
+                </div>
+                
+                <br>
+                
+            </header>
+            <hr>
+            
             <div class="page-content">
                 <p><a href="https://yang-song.net/blog/2021/score/">Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution</a>을 번역한 글입니다.
 번역 과정에서 일부 의역을 포함했습니다.</p>
-<hr>
-<h2 id="introduction">Introduction</h2>
+<h2 id="1introduction">1.Introduction</h2>
 <p>generative modeling 기술은 &ldquo;어떻게 probability distribution&quot;을 나타내는 지로 두 그룹으로 나눌 수 있습니다.</p>
 <ol>
 <li>
@@ -232,8 +270,13 @@ model의 sampling process를 사용해 probability distribution을 implicit하�
 </ul>
 </li>
 </ol>
-<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/1.png" alt="1"><em>Bayesian networks, Markov random fields (MRF), autoregressive models, and normalizing flow models are all examples of likelihood-based models. All these models represent the probability density or mass function of a distribution</em></p>
-<p><img src="/posts/260120-generative_modeling_by_estimating_gradients/2.png" alt="2"><em>GAN is an example of implicit models. It implicitly represents a distribution over all objects that can be produced by the generator networks</em></p>
+<br>
+<img src="1.png" width="1000"/>
+<figcaption>[Bayesian networks, Markov random fields (MRF), autoregressive models, and normalizing flow models are all examples of likelihood-based models. All these models represent the probability density or mass function of a distribution]</figcaption>
+<br>
+<img src="2.png" width="1000"/>
+<figcaption>[GAN is an example of implicit models. It implicitly represents a distribution over all objects that can be produced by the generator networks]</figcaption>
+<br>
 <p>근데, 두 모델 전부 확실한 limitation을 가집니다.<br>
 likelihood-based model은 likelihood를 계산하는 tractable normalizing constant를 보장하기 위해서 모델 아키텍처에 대한 강한 restriction를 필요로하거나, maximum likelihood를 근사하기 위한 간접 objective에 의존해야합니다.
 반면, implicit generative model은 종종 adverarial training을 필요로 하며, 이 방식은 학습 안정성이 너무 낮고 mode collapse를 발생시킬 수 있습니다.</p>
@@ -334,8 +377,33 @@ $$
 <h2 id="concluding-remarks">Concluding remarks</h2>
 
             </div>
-        </article></main>
+        </article><br>
+        <hr>
+        <div class="post-pagination">
+            
+            <a class="pagination-item pagination-prev" href="http://localhost:1313/posts/markdown-syntax/">
+                <span class="pagination-direction">이전 포스트</span>
+                <span class="pagination-title">Markdown Syntax Guide</span>
+            </a>
+            
+            
+            <a class="pagination-item pagination-next" href="http://localhost:1313/posts/2601021-test/">
+                <span class="pagination-direction">다음 포스트</span>
+                <span class="pagination-title">test</span>
+            </a>
+            
+        </div>
+    </main>
+
 </div>
+
+
+
+    
+    
+    <script src="http://localhost:1313/js/sticky-toc.js"></script>
+
+
 <footer class="footer">
     <span class="footer_item"> </span>
     &nbsp;

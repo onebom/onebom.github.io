@@ -74,7 +74,7 @@
     letter-spacing: 0.1px;
 
     @include media-query($on-mobile) {
-      max-width: 15rem;
+      // max-width: 15rem; // Removed to allow more horizontal space
     }
 
     a {

@@ -12,6 +12,15 @@
 - id: "single.table_of_contents"
   translation: "Table of Contents"
 
+- id: "reading_time"
+  translation: "{{ . }} min read"
+
+## POST PAGINATION ##
+- id: "post_pagination.prev_post"
+  translation: "이전 포스트"
+- id: "post_pagination.next_post"
+  translation: "다음 포스트"
+
 ## FOOTER ##
 - id: "footer.go_to_top"
   translation: "Go to top"

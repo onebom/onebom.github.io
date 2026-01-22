@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("sticky-toc");if(!e)return;const n=180,s=30;function t(){const t=window.scrollY,o=Math.max(s,n-t);e.style.top=o+"px"}t(),window.addEventListener("scroll",t,{passive:!0})})

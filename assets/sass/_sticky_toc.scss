@@ -1,0 +1,63 @@
+#sticky-toc {
+    display: none; // Hidden by default
+    position: fixed;
+    top: 180px;
+    width: 250px;
+    background-color: transparent; // Make background transparent
+    border-radius: 0; // Remove border radius
+    padding: 0; // Adjust padding, will be handled by inner elements
+
+    .sticky-toc-title {
+        font-size: 0rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--secondary-color);
+        margin-top: 0;
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+    }
+
+    #TableOfContents {
+        padding-left: 0;
+        list-style: none;
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+
+        ul {
+            padding-left: 15px;
+            list-style: none;
+            margin: 0;
+            
+        }
+
+        li {
+            margin-bottom: 8px;
+            
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s ease;
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
+    }
+
+    > #TableOfContents > ul {
+        padding-left: 0;
+    }
+}
+
+// On wide screens, display and position the sidebar.
+@media (min-width: 1350px) { // Use a wider breakpoint to ensure there's enough space
+    #sticky-toc {
+        display: block;
+        // Position it in the space to the left of the centered main content
+        left: calc(50% - (#{$narrow-size} / 2) - 250px - 10px); // 50% - half_content - toc_width - margin
+    }
+}

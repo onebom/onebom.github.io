@@ -1,23 +1,77 @@
 {{ define "main" }}
 <div class="wrapper post">
+
+    {{ if .TableOfContents }}
+    <aside id="sticky-toc">
+        <h3 class="sticky-toc-title">{{ T "single.table_of_contents" }}</h3>
+        {{ partial "toc.html" . }}
+    </aside>
+    {{ end }}
+
     <main class="page-content" aria-label="Content">
         <article>
             <header class="header">
                 <h1 class="header-title">{{ .Title }}</h1>
-                {{ $configDateFormat := .Site.Params.dateFormat | default ":date_medium" }}
-                {{ with .Date }}
-                {{ $ISO_time := dateFormat "2006-01-02T15:04:05-07:00" . }}
-                <div class="post-meta">
-                    <time datetime="{{ $ISO_time }}" itemprop="datePublished"> {{ . | time.Format $configDateFormat }} </time>
-                </div>
+                {{ with .Description }}
+                    <p class="post-description">{{ . }}</p>
                 {{ end }}
+                {{ $configDateFormat := .Site.Params.dateFormat | default ":date_medium" }}
+                <div class="post-meta">
+                    {{ with .Date }}
+                        {{ $ISO_time := dateFormat "2006-01-02T15:04:05-07:00" . }}
+                        <time datetime="{{ $ISO_time }}" itemprop="datePublished"> {{ . | time.Format $configDateFormat }} </time>
+                    {{ end }}
+                    {{ if or (eq .Params.showReadingTime nil) (eq .Params.showReadingTime true) }}
+                        <span class="post-reading-time">&nbsp; | &nbsp; {{ T "reading_time" .ReadingTime }}</span>
+                    {{ end }}     
+                    {{ if .TableOfContents }}
+                    <div class="in-content-toc">
+                        {{ partial "toc.html" . }}
+                    </div>
+                    {{ end }}
+                </div>
+                {{if (.Date)}}
+                <br>
+                {{end}}
             </header>
-            {{ partial "toc.html" .}}
+            <hr>
+            
             <div class="page-content">
                 {{ .Content }}
             </div>
         </article>
         {{- partial "comments.html" . -}}
+        <br>
+        <hr>
+        <div class="post-pagination">
+            {{ with .PrevInSection }}
+            <a class="pagination-item pagination-prev" href="{{ .Permalink }}">
+                <span class="pagination-direction">{{ T "post_pagination.prev_post" }}</span>
+                <span class="pagination-title">{{ .Title }}</span>
+            </a>
+            {{ else }}
+            <span class="pagination-item pagination-placeholder"></span>
+            {{ end }}
+            {{ with .NextInSection }}
+            <a class="pagination-item pagination-next" href="{{ .Permalink }}">
+                <span class="pagination-direction">{{ T "post_pagination.next_post" }}</span>
+                <span class="pagination-title">{{ .Title }}</span>
+            </a>
+            {{ else }}
+            <span class="pagination-item pagination-placeholder"></span>
+            {{ end }}
+        </div>
     </main>
+
 </div>
+
+
+{{ if .TableOfContents }}
+    {{ $stickyTocJS := resources.Get "js/sticky-toc.js" }}
+    {{ if hugo.IsProduction }}
+        {{ $stickyTocJS = $stickyTocJS | resources.Minify | resources.Fingerprint }}
+    {{ end }}
+    <script src="{{ $stickyTocJS.Permalink }}"></script>
+{{ end }}
+
 {{ end }}

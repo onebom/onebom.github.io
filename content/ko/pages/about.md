@@ -1,8 +1,8 @@
 ---
 title: About
-description: 'Hugo, the world''s fastest framework for building websites'
 author: Hugo Authors
 toc: false
+showReadingTime: false
 ---
 
 [Linkedin](https://www.linkedin.com/in/onebom/) | [Github](https://github.com/onebom) | [CV](https://drive.google.com/file/d/11jslX4cBe-KtkTRY64JGxThTIWKiO_r7/view?usp=sharing)

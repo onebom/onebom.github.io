@@ -242,8 +242,8 @@ blockquote {
   @include media-query($on-mobile) {
     max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full}));
     max-width: calc(#{$narrow-size} - (#{$spacing-full}));
-    padding-right: $spacing-full - 10;
-    padding-left: $spacing-full - 10;
+    padding-right: $spacing-full - 20; // Changed from -10 to -20 (now 10px)
+    padding-left: $spacing-full - 20;  // Changed from -10 to -20 (now 10px)
 
     &.blurry {
       animation: 0.2s ease-in forwards blur;

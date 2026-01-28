@@ -314,7 +314,7 @@ $$
 $$
 $\sigma_1 < \sigma_2 < \cdots < \sigma_L$에 따라 $N(0,\sigma^2_1 I), N(0,\sigma^2_2 I), \cdots, N(0,\sigma^2_L I)$와 같이 평균이 0이면서 variance가 exponentially 증가하는 가우시안 노이즈를 더합니다.
 일반적으로 SDE에 잘 작동하는 noise perturbation 방법으로는 3가지가 있습니다;   
-1) Varaince Exploding SDE(VE SDE, 위 예시), 2) Varaince Preserving(VP SDE), 3) sub-VP SDE
+1)Varaince Exploding SDE(VE SDE, 위 예시), 2)Varaince Preserving(VP SDE), 3)sub-VP SDE
 
 ### Reversing the SDE for sample generation
 유한한 noise scale을 사용하면, **annealed Langevin dynamics**으로 perturbation에 대한 역과정으로 sample을 얻을 수 있다는 사실을 다시 상기해봅시다.
@@ -327,11 +327,11 @@ i.e. Langevin dynamics를 사용하면 각 noise perturbation 분포에서 순�
 </center>
 
 중요한건, SDE는 모두 그에 대응되는 reverse SDE를 갖는다는 것입니다. 그에 대한 closed form은 다음과 같습니다;
-<br>
+
 $$
-\begin{equation} \mathrm{d}\mathbf{x} = [\mathbf{f}(\mathbf{x}, t) - g^2(t) \nabla_\mathbf{x} \log p_t(\mathbf{x})]\mathrm{d}t + g(t) \mathrm{d} \mathbf{w}.\label{rsde} \end{equation}
+\begin{equation} \mathrm{d}\mathbf{x} = [\mathbf{f}(\mathbf{x}, t) - g^2(t) \nabla_\mathbf{x} \log p_t(\mathbf{x})]\mathrm{d}t + g(t) \mathrm{d} \mathbf{w}.\end{equation}
 $$
-<br>
+
 여기서 SDE가 time 역순($t=T$ to $t=0$)으로 backward에서도 solved되어야 하기 때문에 $dt$는 negative 무한 time step을 의미합니다.
 reverse SDE를 연산하기 위해서, 우리는 $p_t(x)$의 score function인 $\nabla_\mathbf{x} \log p_t(\mathbf{x})$를 정확히 추정해야만 합니다.
 

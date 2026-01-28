@@ -2,67 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Onebom</title>
-    <link>https://hba.sid.one/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Onebom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 21 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://hba.sid.one/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>test</title>
-      <link>https://hba.sid.one/posts/2601021-test/</link>
-      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://hba.sid.one/posts/2601021-test/</guid>
-      
-      <description>&lt;p&gt;&lt;a href=&#34;https://yang-song.net/blog/2021/score/&#34;&gt;Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution&lt;/a&gt;을 번역한 글입니다.
-번역 과정에서 일부 의역을 포함했습니다.&lt;/p&gt;
-&lt;h2 id=&#34;1introduction&#34;&gt;1.Introduction&lt;/h2&gt;
-&lt;p&gt;generative modeling 기술은 &amp;ldquo;어떻게 probability distribution&amp;quot;을 나타내는 지로 두 그룹으로 나눌 수 있습니다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;likelihood-based models&lt;/strong&gt;&lt;br&gt;
-distribution의 P.D.F(probability density function)또는 P.M.F(probability mass function)을 maximum likelihood를 근사하는 방식으로 학습하는 방식.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;autoregressive models, normalizing flow models, energy-based model(EBMs), variational auto-enocder(VAEs) 모델들이 보통 likelihood-based model 방식입니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;implicit generative models&lt;/strong&gt;&lt;br&gt;
-model의 sampling process를 사용해 probability distribution을 implicit하게 표현하는 방식.&lt;/p&gt;</description>
-      
-    </item>
-    
+    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Score-based generative modeling</title>
-      <link>https://hba.sid.one/posts/260120-generative_modeling_by_estimating_gradients/</link>
+      <link>http://localhost:1313/posts/260120-generative_modeling_by_estimating_gradients/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://hba.sid.one/posts/260120-generative_modeling_by_estimating_gradients/</guid>
+      <guid>http://localhost:1313/posts/260120-generative_modeling_by_estimating_gradients/</guid>
       
       <description>&lt;p&gt;&lt;a href=&#34;https://yang-song.net/blog/2021/score/&#34;&gt;Yang Song - Generative Modeling by Estimating Gradients of the Data Distribution&lt;/a&gt;을 번역한 글입니다.
 번역 과정에서 일부 의역을 포함했습니다.&lt;/p&gt;
-&lt;h2 id=&#34;1introduction&#34;&gt;1.Introduction&lt;/h2&gt;
-&lt;p&gt;generative modeling 기술은 &amp;ldquo;어떻게 probability distribution&amp;quot;을 나타내는 지로 두 그룹으로 나눌 수 있습니다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;likelihood-based models&lt;/strong&gt;&lt;br&gt;
-distribution의 P.D.F(probability density function)또는 P.M.F(probability mass function)을 maximum likelihood를 근사하는 방식으로 학습하는 방식.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;autoregressive models, normalizing flow models, energy-based model(EBMs), variational auto-enocder(VAEs) 모델들이 보통 likelihood-based model 방식입니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;implicit generative models&lt;/strong&gt;&lt;br&gt;
-model의 sampling process를 사용해 probability distribution을 implicit하게 표현하는 방식.&lt;/p&gt;</description>
+&lt;p&gt;본 post는 generative modeling의 새로운 방향을 제시합니다. 포스트를 통해 noise-pertubated data distribution에 대한 score function(gradients of log probability density function)을 배우고, Langevin-type sampling으로 새로운 sample들을 생성해보고자 합니다. score-based generative model이라 불리는 생성모델은 기존 생성모델에 비해 몇가지 중요한 장점을 가집니다; 1)adversarial training이 없는 GAN 보다 좋은 수준의 sample quality, 2) 유연한 모델 아키텍처, 3) 정확한 log-likelihood computation, 마지막으로 4) re-training 필요없는 inverse problem solving. 이 포스트에서는 score-based generative model의 intuition, basic concepts, potential application에 대해 구체적으로 다루고자 합니다.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://hba.sid.one/posts/markdown-syntax/</link>
+      <link>http://localhost:1313/posts/markdown-syntax/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hba.sid.one/posts/markdown-syntax/</guid>
+      <guid>http://localhost:1313/posts/markdown-syntax/</guid>
       
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
       

@@ -1,0 +1,69 @@
+name: onebom
+portrait: ""
+intro: >-
+  I work on deep learning for computer vision and generative models.
+  My experience spans medical image analysis, object detection, and AI applications,
+  with research experience at MIDAS and the Multi-Modality Medical Imaging Lab (MMMIL).
+research_intro: >-
+  I am interested in generative models, especially diffusion and score-based methods,
+  and their foundations in linear algebra and probability. My projects explore how
+  visual representations can support practical tasks, from medical image classification
+  to object detection and interactive applications.
+links:
+  - label: CV
+    url: https://drive.google.com/file/d/11jslX4cBe-KtkTRY64JGxThTIWKiO_r7/view?usp=sharing
+  - label: GitHub
+    url: https://github.com/onebom
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/onebom/
+research:
+  - title: Automatic injection controller with YOLOv4 fluid detection
+    year: "2022"
+    tag: Object detection
+    mark: DNA
+    highlighted: true
+    venue: Creative Innovation DNA Industry–Academia Research Project
+    description: A web service for automatic injection control using YOLOv4-based fluid detection. Received the Engineering Innovation Award in the 2022 DNA project.
+    url: https://github.com/onebom/DNA
+  - title: Deep learning for malocclusion classification
+    year: "2021"
+    tag: Medical imaging
+    mark: MALO
+    highlighted: false
+    venue: Korean Society of Medical and Biological Engineering · Spring meeting
+    description: Classification of malocclusion using molar relationship distances and pseudo multi-label learning. Presented as a conference abstract in 2021, with a patent application.
+    url: https://github.com/onebom/Malocclusion_RestAPI
+  - title: Third molar–mandibular canal contact classification with CBAM
+    year: "2021"
+    tag: Attention learning
+    mark: CBAM
+    highlighted: false
+    venue: Medical image analysis project
+    description: A three-stage learning pipeline for classifying contact between the third molar and the mandibular canal, using attention-based image representations.
+    url: https://github.com/onebom/3rd_Molar_to_canal
+education:
+  - date: M.S.
+    title: Sungkyunkwan University (SKKU)
+    description: ""
+  - date: Oct. 2022 – Mar. 2023
+    title: Krafton Jungle
+    description: Software engineering training program.
+activities:
+  - date: From Feb. 2024
+    title: MIDAS
+    role: Researcher
+    description: ""
+  - date: Feb. 2021 – May 2022
+    title: Multi-Modality Medical Imaging Lab (MMMIL)
+    role: Research Scientist
+    description: Research experience in medical imaging and deep learning.
+projects:
+  - title: Generative AI applications
+    description: A PyTorch library for generative model experiments.
+    url: https://github.com/onebom/Deep_Learning_CV_Practice/tree/main/GenerativeAI_application
+  - title: NowMeSeeMe
+    description: An avatar-based application for emotion monitoring and psychological counseling, built with TensorFlow and Unity.
+    url: https://github.com/onebom/NowMSM_AI
+  - title: BiamIO
+    description: A snake game controlled through deep learning-based hand detection, built with Vue, Flask, and Node.js.
+    url: https://github.com/onebom/BiamIO

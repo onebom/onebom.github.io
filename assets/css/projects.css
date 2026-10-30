@@ -1,0 +1,141 @@
+.project-list {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0 48px;
+}
+.project-entry {
+  display: grid;
+  grid-template-columns: minmax(160px, 22%) minmax(0, 1fr);
+  align-items: center;
+  gap: 28px;
+  padding: 24px;
+  color: var(--global-text-color);
+}
+.project-thumbnail img {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+.project-thumbnail-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  background: #e4eadd;
+  color: #526552;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.project-details h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.project-venue,
+.project-links p {
+  margin: 0;
+}
+.project-links a {
+  color: var(--global-theme-color, #b509ac);
+}
+.project-links a:hover {
+  text-decoration: underline;
+}
+.project-links:empty {
+  display: none;
+}
+.project-description {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+.project-description p:last-child {
+  margin-bottom: 0;
+}
+html[data-theme="dark"] .project-thumbnail-placeholder {
+  background: #333f34;
+  color: #d6e3d2;
+}
+@media (max-width: 640px) {
+  .project-entry {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 20px;
+  }
+  .project-thumbnail {
+    width: min(100%, 280px);
+    margin: 0 auto;
+  }
+  .project-details h2 {
+    font-size: 19px;
+  }
+}
+
+.academic-about .project-details h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.academic-about .project-list {
+  margin-bottom: 24px;
+}
+
+.project-image-link {
+  display: block;
+}
+.project-details a.project-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+.project-details a.project-title-link:hover {
+  text-decoration: underline;
+}
+.project-image-link:focus-visible,
+.project-title-link:focus-visible {
+  outline: 2px solid var(--global-theme-color, #b509ac);
+  outline-offset: 4px;
+}
+
+.academic-about .publication-list .project-details h3 {
+  font-weight: 400;
+}
+.publication-list .project-description {
+  margin-top: 8px;
+}
+
+.academic-about .publication-list {
+  gap: 15px;
+}
+.publication-list .project-entry {
+  padding: 10px 24px;
+}
+.publication-list .project-thumbnail-placeholder {
+  min-height: 100px;
+}
+.publication-list .project-thumbnail img {
+  max-height: 140px;
+}
+
+.academic-about .about-project-records a.project-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+.academic-about .about-project-records a.project-title-link:hover {
+  text-decoration: underline;
+}
+
+.about-project-records .markdown-content ul,
+.about-project-records .markdown-content ol {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  line-height: 1.35;
+}
+.about-project-records .markdown-content li {
+  margin: 2px 0;
+}
+.about-project-records .markdown-content li p {
+  margin: 0;
+}

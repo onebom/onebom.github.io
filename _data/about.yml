@@ -57,26 +57,61 @@ experience:
 # Publications: add title, authors, venue, year, and url for each entry.
 publications:
   - name: "**Hanbom Woo**, Il Yong Chun"
+    image: "" # e.g. /assets/img/publications/paper.jpg
     title: "**SAM3Future: Predicting future frames using object-centric video representations**"
     description : "International Conference on Advanced Machine Learning and Data Science (AMLDS), 2026"
     link: "[Paper](https://onebom.github.io/) / [Project page](https://onebom.github.io/)"
 
   - name: "**Hanbom Woo**, Hyuk Heo, Il Yong Chun"
+    image: "" # e.g. /assets/img/publications/paper.jpg
     title: "**SegJoint: Motion-Free Segmentation Conditioning for Video Prediction**"
     description : Workshop on Image Processing and Image Understanding (IPIU), 2026
     link: "[Paper](https://onebom.github.io/) / [Project page](https://onebom.github.io/)"
 
   - name: "**Hanbom Woo**, Yong-Gi Hong, Hang-Keun Kim,"
+    image: "" # e.g. /assets/img/publications/paper.jpg
     title: "**Deep Learning based Malocclusion classification with distance of molar relationships**"
     description : Conference of the Korean Society of Medical and Biological Engineering (KOSOMBE), 2021
     link: "[Paper](https://onebom.github.io/) / [Project page](https://onebom.github.io/)"
 
 projects:
+  - title: "Generalizable 3D Gaussian Reconstruction via Latent Diffusion"
+    year: "Aug.2024 ~ Mar.2025"
+    tag:
+    mark:
+    highlighted: false
+    venue: AIM FUTURE & MIDAS Lab
+    description: A latent diffusion-based approach to 3D Gaussian reconstruction that aims to generalize across unseen scenes.
+    link: "[Code](https://github.com/onebom) / [Project page](https://onebom.github.io/)"
+
+  - title: "Biam.io: Web-based snake game"
+    year: "Feb.2023 ~ Mar.2023"
+    tag:
+    mark:
+    highlighted: false
+    venue: Krafton Jungle
+    description: An interactive web-based snake game controlled by hand gestures using deep learning-based hand detection.
+    link: "[Code](https://github.com/onebom) / [Project page](https://onebom.github.io/)"
+
   - title: Automatic injection controller with YOLOv4 fluid detection
-    year: "2022"
+    year: "Feb.2022 ~ Oct.2022"
     tag: Object detection
     mark: DNA
-    highlighted: true
+    highlighted: false
     venue: Creative Innovation DNA Industry–Academia Research Project
     description: A web service for automatic injection control using YOLOv4-based fluid detection. Received the Engineering Innovation Award in the 2022 DNA project.
     link: "[Code](https://github.com/onebom) / [Project page](https://onebom.github.io/)"
+
+honors:
+  - title: "President’s Award for Academic Excellence Scholarship at Gachon University"
+    date: Feb.2024
+
+  - title: "Engineering Innovation Award"
+    date: Oct.2022
+    description: "- Received the Engineering Innovation Award in the 2022 DNA project for the automatic injection controller with YOLOv4 fluid detection."
+
+technical_skills:
+  - title: "**Programming Languages**: Python, C/C++, Node.js, Flask"
+  - title: "**Deep Learning Frameworks**: PyTorch, TensorFlow"
+  - title: "**Tools**: Git, Docker, Linux, OpenCV"
+  - title: "**Languages**: English (OPIc IM2)"

@@ -224,3 +224,53 @@ html[data-theme="dark"] .portrait-initial {
     min-height: 75px;
   }
 }
+
+.about-bio ul,
+.about-bio ol {
+  margin: 0 0 24px;
+  padding-left: 1.5em;
+}
+.about-bio ul {
+  list-style-type: disc;
+}
+.about-bio ol {
+  list-style-type: decimal;
+}
+.about-bio li {
+  margin: 0.3em 0;
+}
+.about-bio strong {
+  font-weight: 700;
+}
+
+.about-records {
+  border-top: 0;
+  padding-top: 28px;
+  margin-bottom: 38px;
+}
+.about-records h2 {
+  font-size: 32px;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--global-divider-color, #aaa);
+}
+.record-list {
+  list-style-type: disc;
+  padding-left: 1.4em;
+  margin: 0;
+}
+.record-list > li {
+  padding-left: 0.3em;
+  margin-bottom: 24px;
+}
+.record-list ul {
+  list-style-type: circle;
+  padding-left: 1.5em;
+  margin-top: 6px;
+}
+.record-list ul li {
+  margin: 4px 0;
+}
+.publication-empty {
+  color: var(--global-text-color-light, #666);
+}

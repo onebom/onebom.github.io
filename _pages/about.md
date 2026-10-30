@@ -10,7 +10,7 @@ permalink: /
   <header class="about-hero">
     <h1 class="about-name">{{ bio.name }}</h1>
     <div class="about-introduction">
-      <p>{{ bio.intro }}</p>
+      <div class="about-bio">{{ bio.intro | markdownify }}</div>
       <nav class="about-links" aria-label="Profile links">
         {% for link in bio.links %}
           <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span aria-hidden="true">/</span>{% endunless %}
@@ -25,6 +25,38 @@ permalink: /
       {% endif %}
     </div>
   </header>
+  <section class="about-section about-records" aria-labelledby="education-heading">
+    <h2 id="education-heading">Education</h2>
+    <ul class="record-list">
+      {% for item in bio.education %}
+      <li>
+        <strong>{{ item.title }}</strong>
+        <ul>
+          <li>{{ item.date }}</li>
+          {% if item.description != empty %}<li>{{ item.description }}</li>{% endif %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section class="about-section about-records" aria-labelledby="publications-heading">
+    <h2 id="publications-heading">Publications</h2>
+    {% if bio.publications.size > 0 %}
+    <ul class="record-list">
+      {% for item in bio.publications %}
+      <li>
+        <strong>{{ item.title }}</strong>
+        <ul>
+          {% if item.authors %}<li>{{ item.authors }}</li>{% endif %}
+          <li>{% if item.venue %}<strong>{{ item.venue }}</strong>{% endif %}{% if item.year %}, {{ item.year }}{% endif %}{% if item.url %} · <a href="{{ item.url }}">Paper</a>{% endif %}</li>
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="publication-empty">Publication details will be added here.</p>
+    {% endif %}
+  </section>
   <section class="about-section" aria-labelledby="research-heading">
     <h2 id="research-heading">Research</h2>
     <p>{{ bio.research_intro }}</p>
@@ -41,15 +73,6 @@ permalink: /
       </article>
       {% endfor %}
     </div>
-  </section>
-  <section class="about-section" aria-labelledby="education-heading">
-    <h2 id="education-heading">Education</h2>
-    {% for item in bio.education %}
-    <div class="about-timeline">
-      <p class="timeline-date">{{ item.date }}</p>
-      <div><h3>{{ item.title }}</h3>{% if item.description != empty %}<p>{{ item.description }}</p>{% endif %}</div>
-    </div>
-    {% endfor %}
   </section>
   <section class="about-section" aria-labelledby="activities-heading">
     <h2 id="activities-heading">Research Activities</h2>

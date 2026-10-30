@@ -1,14 +1,18 @@
-name: onebom
-portrait: ""
-intro: >-
-  I work on deep learning for computer vision and generative models.
-  My experience spans medical image analysis, object detection, and AI applications,
-  with research experience at MIDAS and the Multi-Modality Medical Imaging Lab (MMMIL).
+name: Hanbom Woo
+portrait: "/assets/img/me.jpeg"
+intro: |-
+  Hi, I’m a research engineer with a background in computer vision and generative models. 
+  I received my M.S. from **Sungkyunkwan University (SKKU)**, where I conducted research at the **Machine Intelligence & Data Science (MIDAS) Lab**, advised by **Prof. Il Yong Chun**.
+  Currently, I focus on long-term video prediction using object-centric diffusion models.
+
+  My research interests include:
+
+  - Video and 3D Gaussian Splatting (3DGS)
+  - Generative AI
+  - Multimodal AI
+
 research_intro: >-
-  I am interested in generative models, especially diffusion and score-based methods,
-  and their foundations in linear algebra and probability. My projects explore how
-  visual representations can support practical tasks, from medical image classification
-  to object detection and interactive applications.
+
 links:
   - label: CV
     url: https://drive.google.com/file/d/11jslX4cBe-KtkTRY64JGxThTIWKiO_r7/view?usp=sharing
@@ -41,6 +45,8 @@ research:
     venue: Medical image analysis project
     description: A three-stage learning pipeline for classifying contact between the third molar and the mandibular canal, using attention-based image representations.
     url: https://github.com/onebom/3rd_Molar_to_canal
+# Publications: add title, authors, venue, year, and url for each entry.
+publications: []
 education:
   - date: M.S.
     title: Sungkyunkwan University (SKKU)

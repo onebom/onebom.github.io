@@ -65,14 +65,15 @@ publications:
   - name: "**Hanbom Woo**, Hyuk Heo, Il Yong Chun"
     image: "" # e.g. /assets/img/publications/paper.jpg
     title: "**SegJoint: Motion-Free Segmentation Conditioning for Video Prediction**"
+    project_url: /260204/SegJoint/
     description : Workshop on Image Processing and Image Understanding (IPIU), 2026
-    link: "[Paper](https://onebom.github.io/) / [Project page](https://onebom.github.io/)"
+    link: "[Paper](https://onebom.github.io/) / [Project page](https://onebom.github.io/260204/SegJoint/)"
 
   - name: "**Hanbom Woo**, Yong-Gi Hong, Hang-Keun Kim,"
     image: "" # e.g. /assets/img/publications/paper.jpg
     title: "**Deep Learning based Malocclusion classification with distance of molar relationships**"
     description : Conference of the Korean Society of Medical and Biological Engineering (KOSOMBE), 2021
-    link: "[Paper](https://onebom.github.io/) / [Project page](https://onebom.github.io/)"
+    link: "[Paper](https://onebom.github.io/) / [Code](https://onebom.github.io/)"
 
 projects:
   - title: "Generalizable 3D Gaussian Reconstruction via Latent Diffusion"
@@ -80,7 +81,7 @@ projects:
     tag:
     mark:
     highlighted: false
-    venue: AIM FUTURE & MIDAS Lab
+    venue: Industry–Academia Project with "AIM FUTURE & MIDAS Lab"
     description: A latent diffusion-based approach to 3D Gaussian reconstruction that aims to generalize across unseen scenes.
     link: "[Code](https://github.com/onebom) / [Project page](https://onebom.github.io/)"
 

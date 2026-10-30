@@ -8,8 +8,8 @@ permalink: /
 {% assign bio = site.data.about %}
 <div class="academic-about">
   <header class="about-hero">
+    <h1 class="about-name">{{ bio.name }}</h1>
     <div class="about-introduction">
-      <h1>{{ bio.name }}</h1>
       <p>{{ bio.intro }}</p>
       <nav class="about-links" aria-label="Profile links">
         {% for link in bio.links %}

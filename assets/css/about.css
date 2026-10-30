@@ -1,7 +1,8 @@
 .academic-about {
-  max-width: 800px;
+  max-width: 930px;
   margin: 0 auto 4rem;
-  font-size: 15px;
+  font-family: "Times New Roman", Times, "Noto Serif KR", serif;
+  font-size: 18px;
   line-height: 1.55;
   color: var(--global-text-color);
 }
@@ -18,20 +19,28 @@
 }
 .about-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
-  align-items: center;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) 30%;
+  align-items: start;
+  column-gap: 36px;
+  row-gap: 28px;
   padding: 10px 16px 30px;
 }
-.about-introduction h1 {
-  font-size: 34px;
-  font-weight: 500;
-  text-align: center;
-  margin: 0 0 18px;
-  letter-spacing: -0.7px;
+.academic-about .about-name {
+  grid-column: 1 / -1;
+  font-family: inherit;
+  font-size: 44px;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+.academic-about h2,
+.academic-about h3 {
+  font-family: inherit;
 }
 .about-introduction p {
-  margin: 0 0 16px;
+  margin: 0 0 24px;
 }
 .about-links {
   display: flex;
@@ -41,9 +50,11 @@
 }
 .about-portrait img,
 .portrait-initial {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
   object-fit: cover;
 }
 .portrait-initial {
@@ -70,8 +81,8 @@
   margin-top: 4px;
 }
 .academic-about h2 {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: 700;
   margin: 0 0 14px;
 }
 .academic-about h3 {
@@ -172,13 +183,14 @@ html[data-theme="dark"] .portrait-initial {
     padding: 0 4px 28px;
   }
   .about-portrait {
-    grid-row: 1;
+    grid-row: auto;
     justify-self: center;
+    width: min(240px, 100%);
   }
   .about-portrait img,
   .portrait-initial {
-    width: 175px;
-    height: 175px;
+    width: 100%;
+    height: auto;
   }
   .about-section {
     padding-left: 4px;

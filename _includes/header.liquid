@@ -1,7 +1,28 @@
 <header>
+  <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
+      <div class="navbar-tools">
+        {% if site.search_enabled %}
+          <!-- Search -->
+          <div class="navbar-tool">
+            <button id="search-toggle" class="nav-link" type="button" title="Search" aria-label="Open search">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </div>
+        {% endif %}
+        {% if site.enable_darkmode %}
+          <!-- Toogle theme mode -->
+          <div class="navbar-tool">
+            <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
+              <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+              <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+              <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+            </button>
+          </div>
+        {% endif %}
+      </div>
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
@@ -116,24 +137,6 @@
               {% endif %}
             {% endif %}
           {% endfor %}
-          {% if site.search_enabled %}
-            <!-- Search -->
-            <li class="nav-item">
-              <button id="search-toggle" class="nav-link" type="button" title="Search" aria-label="Open search">
-                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-              </button>
-            </li>
-          {% endif %}
-          {% if site.enable_darkmode %}
-            <!-- Toogle theme mode -->
-            <li class="toggle-container">
-              <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
-                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
-                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
-              </button>
-            </li>
-          {% endif %}
         </ul>
       </div>
     </div>

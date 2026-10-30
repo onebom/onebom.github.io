@@ -2,12 +2,12 @@
   max-width: 930px;
   margin: 0 auto 4rem;
   font-family: "Times New Roman", Times, "Noto Serif KR", serif;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.55;
   color: var(--global-text-color);
 }
 .academic-about a {
-  color: #2775ae;
+  color: var(--global-theme-color, #b509ac);
   text-decoration: none;
 }
 .academic-about a:hover {
@@ -28,7 +28,7 @@
 .academic-about .about-name {
   grid-column: 1 / -1;
   font-family: inherit;
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 700;
   text-align: left;
   margin: 0;
@@ -126,9 +126,7 @@
   font-size: 11px;
   margin-top: 8px;
 }
-.research-details h3 a {
-  color: inherit;
-}
+
 .research-venue {
   font-size: 13px;
   font-style: italic;
@@ -166,7 +164,7 @@
   font-size: 14px;
 }
 html[data-theme="dark"] .academic-about a {
-  color: #8bc8f2;
+  color: #df75d8;
 }
 html[data-theme="dark"] .research-highlight {
   background: #373421;
@@ -274,3 +272,79 @@ html[data-theme="dark"] .portrait-initial {
 .publication-empty {
   color: var(--global-text-color-light, #666);
 }
+
+.about-records h2 {
+  scroll-margin-top: 90px;
+}
+.markdown-content p {
+  margin: 6px 0;
+}
+.markdown-content strong {
+  font-weight: 700;
+}
+.markdown-content ul {
+  list-style-type: circle;
+  padding-left: 1.5em;
+}
+.markdown-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+}
+.record-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.record-title p {
+  margin-bottom: 6px;
+}
+.record-date,
+.record-role,
+.record-authors,
+.record-venue {
+  margin: 4px 0;
+}
+.record-role,
+.record-venue {
+  font-style: italic;
+}
+.record-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+.record-links:empty {
+  display: none;
+}
+.about-links a + a::before {
+  content: "/";
+  color: var(--global-text-color);
+  margin-right: 9px;
+}
+.section-empty {
+  color: var(--global-text-color-light, #666);
+}
+
+.academic-about .about-records {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.academic-about .about-records h2 {
+  font-size: 25px;
+}
+.academic-about .record-title {
+  font-size: 16px;
+}
+.academic-about .experience-title {
+  font-weight: 700;
+}
+.academic-about .experience-date {
+  white-space: nowrap;
+}
+section[aria-labelledby="publications-heading"] .record-title {
+  font-weight: 400;
+}
+
+.record-link-list { list-style-type: circle; padding-left: 1.5em; margin: 6px 0; }
+.record-link-list a { text-decoration: underline; text-underline-offset: 2px; }
+.record-link-list p { margin: 0; }

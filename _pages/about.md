@@ -13,7 +13,7 @@ permalink: /
       <div class="about-bio">{{ bio.intro | markdownify }}</div>
       <nav class="about-links" aria-label="Profile links">
         {% for link in bio.links %}
-          <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span aria-hidden="true">/</span>{% endunless %}
+          {% if link.url and link.url != empty %}<a href="{{ link.url | escape }}">{{ link.label }}</a>{% endif %}
         {% endfor %}
       </nav>
     </div>
@@ -27,17 +27,50 @@ permalink: /
   </header>
   <section class="about-section about-records" aria-labelledby="education-heading">
     <h2 id="education-heading">Education</h2>
+    {% if bio.education.size > 0 %}
     <ul class="record-list">
       {% for item in bio.education %}
       <li>
-        <strong>{{ item.title }}</strong>
-        <ul>
-          <li>{{ item.date }}</li>
-          {% if item.description != empty %}<li>{{ item.description }}</li>{% endif %}
-        </ul>
+        <div class="record-title markdown-content">{{ item.title | markdownify }}</div>
+        {% if item.date %}<p class="record-date">{{ item.date }}</p>{% endif %}
+        {% if item.role %}<div class="record-role markdown-content">{{ item.role | markdownify }}</div>{% endif %}
+        {% if item.authors or item.name %}<div class="record-authors markdown-content">{{ item.authors | default: item.name | markdownify }}</div>{% endif %}
+        {% if item.venue %}<p class="record-venue">{{ item.venue }}{% if item.year %}, {{ item.year }}{% endif %}</p>{% endif %}
+        {% if item.description %}<div class="markdown-content">{{ item.description | markdownify }}</div>{% endif %}
+        <div class="record-links">
+          {% for link in item.links %}
+            {% if link.url and link.url != empty %}<a href="{{ link.url | escape }}">{{ link.label }}</a>{% endif %}
+          {% endfor %}
+        </div>
       </li>
       {% endfor %}
     </ul>
+    {% else %}
+    <p class="section-empty">Details to be added.</p>
+    {% endif %}
+  </section>
+  <section class="about-section about-records" aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Experience</h2>
+    {% if bio.experience.size > 0 %}
+    <ul class="record-list">
+      {% for item in bio.experience %}
+      <li>
+        <div class="record-title experience-title"><span>{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% if item.date %} <span class="experience-date">({{ item.date }})</span>{% endif %}</div>
+        {% if item.role %}<div class="record-role markdown-content">{{ item.role | markdownify }}</div>{% endif %}
+        {% if item.authors or item.name %}<div class="record-authors markdown-content">{{ item.authors | default: item.name | markdownify }}</div>{% endif %}
+        {% if item.venue %}<p class="record-venue">{{ item.venue }}{% if item.year %}, {{ item.year }}{% endif %}</p>{% endif %}
+        {% if item.description %}<div class="markdown-content">{{ item.description | markdownify }}</div>{% endif %}
+        <div class="record-links">
+          {% for link in item.links %}
+            {% if link.url and link.url != empty %}<a href="{{ link.url | escape }}">{{ link.label }}</a>{% endif %}
+          {% endfor %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="section-empty">Details to be added.</p>
+    {% endif %}
   </section>
   <section class="about-section about-records" aria-labelledby="publications-heading">
     <h2 id="publications-heading">Publications</h2>
@@ -45,48 +78,98 @@ permalink: /
     <ul class="record-list">
       {% for item in bio.publications %}
       <li>
-        <strong>{{ item.title }}</strong>
-        <ul>
-          {% if item.authors %}<li>{{ item.authors }}</li>{% endif %}
-          <li>{% if item.venue %}<strong>{{ item.venue }}</strong>{% endif %}{% if item.year %}, {{ item.year }}{% endif %}{% if item.url %} · <a href="{{ item.url }}">Paper</a>{% endif %}</li>
-        </ul>
+        <div class="record-title markdown-content">{{ item.title | markdownify }}</div>
+        {% if item.date %}<p class="record-date">{{ item.date }}</p>{% endif %}
+        {% if item.role %}<div class="record-role markdown-content">{{ item.role | markdownify }}</div>{% endif %}
+        {% if item.authors or item.name %}<div class="record-authors markdown-content">{{ item.authors | default: item.name | markdownify }}</div>{% endif %}
+        {% if item.venue %}<p class="record-venue">{{ item.venue }}{% if item.year %}, {{ item.year }}{% endif %}</p>{% endif %}
+        {% if item.description %}<div class="markdown-content">{{ item.description | markdownify }}</div>{% endif %}
+        {% if item.link and item.link != empty %}
+        <ul class="record-link-list"><li class="markdown-content">{{ item.link | markdownify }}</li></ul>
+        {% elsif item.links.size > 0 %}
+        {% capture link_items %}{% assign link_separator = '' %}{% for link in item.links %}{% if link.url and link.url != empty %}{{ link_separator }}<a href="{{ link.url | escape }}">{{ link.label }}</a>{% assign link_separator = ', ' %}{% endif %}{% endfor %}{% endcapture %}
+        {% assign link_items = link_items | strip %}
+        {% if link_items != empty %}<ul class="record-link-list"><li>{{ link_items }}</li></ul>{% endif %}
+        {% endif %}
       </li>
       {% endfor %}
     </ul>
     {% else %}
-    <p class="publication-empty">Publication details will be added here.</p>
+    <p class="section-empty">Details to be added.</p>
     {% endif %}
   </section>
-  <section class="about-section" aria-labelledby="research-heading">
-    <h2 id="research-heading">Research</h2>
-    <p>{{ bio.research_intro }}</p>
-    <div class="research-list">
-      {% for item in bio.research %}
-      <article class="research-entry{% if item.highlighted %} research-highlight{% endif %}">
-        <div class="research-thumbnail" aria-hidden="true"><span>{{ item.mark }}</span><small>{{ item.tag }}</small></div>
-        <div class="research-details">
-          <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-          <p class="research-venue">{{ item.venue }}, {{ item.year }}</p>
-          <a class="research-code" href="{{ item.url }}">project / code</a>
-          <p class="research-description">{{ item.description }}</p>
-        </div>
-      </article>
+  <section class="about-section about-records" aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Projects</h2>
+    {% if bio.projects.size > 0 %}
+    <ul class="record-list">
+      {% for item in bio.projects %}
+      <li>
+        <div class="record-title markdown-content">{{ item.title | markdownify }}</div>
+        {% if item.date %}<p class="record-date">{{ item.date }}</p>{% endif %}
+        {% if item.role %}<div class="record-role markdown-content">{{ item.role | markdownify }}</div>{% endif %}
+        {% if item.authors or item.name %}<div class="record-authors markdown-content">{{ item.authors | default: item.name | markdownify }}</div>{% endif %}
+        {% if item.venue %}<p class="record-venue">{{ item.venue }}{% if item.year %}, {{ item.year }}{% endif %}</p>{% endif %}
+        {% if item.description %}<div class="markdown-content">{{ item.description | markdownify }}</div>{% endif %}
+        {% if item.link and item.link != empty %}
+        <ul class="record-link-list"><li class="markdown-content">{{ item.link | markdownify }}</li></ul>
+        {% elsif item.links.size > 0 %}
+        {% capture link_items %}{% assign link_separator = '' %}{% for link in item.links %}{% if link.url and link.url != empty %}{{ link_separator }}<a href="{{ link.url | escape }}">{{ link.label }}</a>{% assign link_separator = ', ' %}{% endif %}{% endfor %}{% endcapture %}
+        {% assign link_items = link_items | strip %}
+        {% if link_items != empty %}<ul class="record-link-list"><li>{{ link_items }}</li></ul>{% endif %}
+        {% endif %}
+      </li>
       {% endfor %}
-    </div>
+    </ul>
+    {% else %}
+    <p class="section-empty">Details to be added.</p>
+    {% endif %}
   </section>
-  <section class="about-section" aria-labelledby="activities-heading">
-    <h2 id="activities-heading">Research Activities</h2>
-    {% for item in bio.activities %}
-    <div class="about-timeline">
-      <p class="timeline-date">{{ item.date }}</p>
-      <div><h3>{{ item.title }}</h3><p class="activity-role">{{ item.role }}</p>{% if item.description != empty %}<p>{{ item.description }}</p>{% endif %}</div>
-    </div>
-    {% endfor %}
+  <section class="about-section about-records" aria-labelledby="honors-heading">
+    <h2 id="honors-heading">Honors and Awards</h2>
+    {% if bio.honors.size > 0 %}
+    <ul class="record-list">
+      {% for item in bio.honors %}
+      <li>
+        <div class="record-title markdown-content">{{ item.title | markdownify }}</div>
+        {% if item.date %}<p class="record-date">{{ item.date }}</p>{% endif %}
+        {% if item.role %}<div class="record-role markdown-content">{{ item.role | markdownify }}</div>{% endif %}
+        {% if item.authors or item.name %}<div class="record-authors markdown-content">{{ item.authors | default: item.name | markdownify }}</div>{% endif %}
+        {% if item.venue %}<p class="record-venue">{{ item.venue }}{% if item.year %}, {{ item.year }}{% endif %}</p>{% endif %}
+        {% if item.description %}<div class="markdown-content">{{ item.description | markdownify }}</div>{% endif %}
+        <div class="record-links">
+          {% for link in item.links %}
+            {% if link.url and link.url != empty %}<a href="{{ link.url | escape }}">{{ link.label }}</a>{% endif %}
+          {% endfor %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="section-empty">Details to be added.</p>
+    {% endif %}
   </section>
-  <section class="about-section" aria-labelledby="projects-heading">
-    <h2 id="projects-heading">Selected Projects</h2>
-    {% for item in bio.projects %}
-    <div class="about-project"><h3><a href="{{ item.url }}">{{ item.title }}</a></h3><p>{{ item.description }}</p></div>
-    {% endfor %}
+  <section class="about-section about-records" aria-labelledby="technical_skills-heading">
+    <h2 id="technical_skills-heading">Technical Skills</h2>
+    {% if bio.technical_skills.size > 0 %}
+    <ul class="record-list">
+      {% for item in bio.technical_skills %}
+      <li>
+        <div class="record-title markdown-content">{{ item.title | markdownify }}</div>
+        {% if item.date %}<p class="record-date">{{ item.date }}</p>{% endif %}
+        {% if item.role %}<div class="record-role markdown-content">{{ item.role | markdownify }}</div>{% endif %}
+        {% if item.authors or item.name %}<div class="record-authors markdown-content">{{ item.authors | default: item.name | markdownify }}</div>{% endif %}
+        {% if item.venue %}<p class="record-venue">{{ item.venue }}{% if item.year %}, {{ item.year }}{% endif %}</p>{% endif %}
+        {% if item.description %}<div class="markdown-content">{{ item.description | markdownify }}</div>{% endif %}
+        <div class="record-links">
+          {% for link in item.links %}
+            {% if link.url and link.url != empty %}<a href="{{ link.url | escape }}">{{ link.label }}</a>{% endif %}
+          {% endfor %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="section-empty">Details to be added.</p>
+    {% endif %}
   </section>
 </div>

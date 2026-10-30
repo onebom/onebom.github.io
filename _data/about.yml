@@ -1,26 +1,77 @@
 name: Hanbom Woo
 portrait: "/assets/img/me.jpeg"
 intro: |-
-  Hi, I’m a research engineer with a background in computer vision and generative models. 
+  Hi, I’m a research engineer with a background in computer vision and generative models.
   I received my M.S. from **Sungkyunkwan University (SKKU)**, where I conducted research at the **Machine Intelligence & Data Science (MIDAS) Lab**, advised by **Prof. Il Yong Chun**.
   Currently, I focus on long-term video prediction using object-centric diffusion models.
 
   My research interests include:
 
-  - Video and 3D Gaussian Splatting (3DGS)
+  - Video Modeling and 3D Gaussian Splatting (3DGS)
   - Generative AI
   - Multimodal AI
 
 research_intro: >-
 
 links:
+  - label: Email
+    url: mailto:bomsister@gmail.com
   - label: CV
-    url: https://drive.google.com/file/d/11jslX4cBe-KtkTRY64JGxThTIWKiO_r7/view?usp=sharing
+    url: https://github.com/onebom
   - label: GitHub
     url: https://github.com/onebom
   - label: LinkedIn
     url: https://www.linkedin.com/in/onebom/
-research:
+
+education:
+  - date: Mar.2024 ~ Aug. 2026
+    title: M.S. in Electrical and Computer Engineering, **Sungkyunkwan University (SKKU)**
+    description: |-
+      - GPA: 4.5/4.5
+      - Advisor: Prof. Il Yong Chun
+
+  - date: Mar. 2019 – Feb. 2024
+    title: B.S. in Biomedical Engineering & Computer Engineering (Double Major), **Gachon University**
+    description: |-
+      - GPA: 4.08/4.5 (Major GPA: 4.15/4.5)
+
+experience:
+  - date:
+    title: MIDAS Lab, SKKU (Feb.2024 ~ Aug.2026)
+    role: "Graduate Researcher (Advisor: Prof. Il Yong Chun)"
+    description: |-
+      - Worked on a video prediction project using object-centric diffusion models to address distortion in scenes containing multiple objects.
+  - date:
+    title: Krafton Jungle Bootcamp (Oct. 2022 – Mar 2023)
+    role: "Program Graduate"
+    description: |-
+      - Implemented operating system components in Pintos and developed Biam.io, a web-based game, as a team project.
+  - date:
+    title: MMMIL Lab, Gachon University (Aug.2020 ~ Feb.2022)
+    role: "Undergraduate researcher intern (Advisor: Prof. Hang-Keun Kim)"
+    description: |-
+      - Worked on a medical image analysis project to classify malocclusion using molar relationship distances and pseudo multi-label learning.
+
+
+
+# Publications: add title, authors, venue, year, and url for each entry.
+publications:
+  - name: "**Hanbom Woo**, Il Yong Chun"
+    title: "**SAM3Future: Predicting future frames using object-centric video representations**"
+    description : "International Conference on Advanced Machine Learning and Data Science (AMLDS), 2026"
+    link: "[Paper](https://onebom.github.io/) / [Project page](https://onebom.github.io/)"
+
+  - name: "**Hanbom Woo**, Hyuk Heo, Il Yong Chun"
+    title: "**SegJoint: Motion-Free Segmentation Conditioning for Video Prediction**"
+    description : Workshop on Image Processing and Image Understanding (IPIU), 2026
+    link: "[Paper](https://onebom.github.io/) / [Project page](https://onebom.github.io/)"
+
+  - name: "**Hanbom Woo**, Yong-Gi Hong, Hang-Keun Kim,"
+    title: "**Deep Learning based Malocclusion classification with distance of molar relationships**"
+    description : Conference of the Korean Society of Medical and Biological Engineering (KOSOMBE), 2021
+    link: "[Paper](https://onebom.github.io/) / [Project page](https://onebom.github.io/)"
+
+projects:
   - title: Automatic injection controller with YOLOv4 fluid detection
     year: "2022"
     tag: Object detection
@@ -28,48 +79,4 @@ research:
     highlighted: true
     venue: Creative Innovation DNA Industry–Academia Research Project
     description: A web service for automatic injection control using YOLOv4-based fluid detection. Received the Engineering Innovation Award in the 2022 DNA project.
-    url: https://github.com/onebom/DNA
-  - title: Deep learning for malocclusion classification
-    year: "2021"
-    tag: Medical imaging
-    mark: MALO
-    highlighted: false
-    venue: Korean Society of Medical and Biological Engineering · Spring meeting
-    description: Classification of malocclusion using molar relationship distances and pseudo multi-label learning. Presented as a conference abstract in 2021, with a patent application.
-    url: https://github.com/onebom/Malocclusion_RestAPI
-  - title: Third molar–mandibular canal contact classification with CBAM
-    year: "2021"
-    tag: Attention learning
-    mark: CBAM
-    highlighted: false
-    venue: Medical image analysis project
-    description: A three-stage learning pipeline for classifying contact between the third molar and the mandibular canal, using attention-based image representations.
-    url: https://github.com/onebom/3rd_Molar_to_canal
-# Publications: add title, authors, venue, year, and url for each entry.
-publications: []
-education:
-  - date: M.S.
-    title: Sungkyunkwan University (SKKU)
-    description: ""
-  - date: Oct. 2022 – Mar. 2023
-    title: Krafton Jungle
-    description: Software engineering training program.
-activities:
-  - date: From Feb. 2024
-    title: MIDAS
-    role: Researcher
-    description: ""
-  - date: Feb. 2021 – May 2022
-    title: Multi-Modality Medical Imaging Lab (MMMIL)
-    role: Research Scientist
-    description: Research experience in medical imaging and deep learning.
-projects:
-  - title: Generative AI applications
-    description: A PyTorch library for generative model experiments.
-    url: https://github.com/onebom/Deep_Learning_CV_Practice/tree/main/GenerativeAI_application
-  - title: NowMeSeeMe
-    description: An avatar-based application for emotion monitoring and psychological counseling, built with TensorFlow and Unity.
-    url: https://github.com/onebom/NowMSM_AI
-  - title: BiamIO
-    description: A snake game controlled through deep learning-based hand detection, built with Vue, Flask, and Node.js.
-    url: https://github.com/onebom/BiamIO
+    link: "[Code](https://github.com/onebom) / [Project page](https://onebom.github.io/)"

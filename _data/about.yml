@@ -62,7 +62,7 @@ publications:
     project_url: /260723/SAM3Future/
     description : "International Conference on Advanced Machine Learning and Data Science (AMLDS), 2026"
     link: "[Paper](/assets/pdf/SAM3Future.pdf){:target=\"_blank\" rel=\"noopener noreferrer\"} /
-    [Code](https://github.com/onebom) /
+    [Code](https://github.com/onebom/SAM3Future) /
     [Project page](/260723/SAM3Future/)"
 
   - name: "**Hanbom Woo**, Hyuk Heo, Il Yong Chun"
@@ -71,7 +71,7 @@ publications:
     project_url: /260204/SegJoint/
     description : Workshop on Image Processing and Image Understanding (IPIU), 2026
     link: "[Paper](/assets/pdf/SegJoint.pdf){:target=\"_blank\" rel=\"noopener noreferrer\"} /
-    [Code](https://github.com/onebom) /
+    [Code](https://github.com/onebom/SegJoint) /
     [Project page](/260204/SegJoint/)"
 
   - name: "**Hanbom Woo**, Yong-Gi Hong, Hang-Keun Kim,"
@@ -89,7 +89,7 @@ projects:
     highlighted: false
     venue: Industry–Academia Project with "AIM FUTURE & MIDAS Lab"
     description: A latent diffusion-based approach to 3D Gaussian reconstruction that aims to generalize across unseen scenes.
-    link: "[Code](https://github.com/onebom) / [Project page](https://onebom.github.io/)"
+    link: "[Code](https://github.com/onebom/3DDGS) / [Project page](/250202/3DDGS/)"
 
   - title: "Biam.io: Web-based snake game"
     year: "Feb.2023 ~ Mar.2023"
@@ -98,7 +98,7 @@ projects:
     highlighted: false
     venue: Krafton Jungle
     description: An interactive web-based snake game controlled by hand gestures using deep learning-based hand detection.
-    link: "[Code](https://github.com/onebom) / [Project page](https://onebom.github.io/)"
+    link: "[Code](https://github.com/onebom/BiamIO) " #/ [Project page](https://onebom.github.io/)"
 
   - title: Automatic injection controller with YOLOv4 fluid detection
     year: "Feb.2022 ~ Oct.2022"
@@ -107,7 +107,7 @@ projects:
     highlighted: false
     venue: Creative Innovation DNA Industry–Academia Research Project
     description: A web service for automatic injection control using YOLOv4-based fluid detection. Received the Engineering Innovation Award in the 2022 DNA project.
-    link: "[Code](https://github.com/onebom) / [Project page](https://onebom.github.io/)"
+    link: "[Code](https://github.com/onebom/DNA)"
 
 honors:
   - title: "President’s Award for Academic Excellence Scholarship at Gachon University"

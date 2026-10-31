@@ -79,6 +79,9 @@ permalink: /
     <div class="project-list publication-list">
       {% for project in bio.publications %}
   {% assign project_page_url = project.project_url | default: project.url %}
+  {% if project.project_path and project.project_path != empty %}
+    {% capture project_page_url %}{% link {{ project.project_path }} %}{% endcapture %}
+  {% endif %}
   {% if project_page_url == nil or project_page_url == empty %}
     {% for link in project.links %}{% assign label = link.label | downcase %}{% if label == 'project page' %}{% assign project_page_url = link.url %}{% endif %}{% endfor %}
     {% if project.link contains '[Project page](' %}{% assign project_page_url = project.link | split: '[Project page](' | last | split: ')' | first %}{% endif %}
@@ -99,16 +102,23 @@ permalink: /
       {% if project.venue or project.year or project.date %}
       <p class="project-venue">{% if project.venue %}<em>{{ project.venue | escape }}</em>{% endif %}{% if project.year %}{% if project.venue %}, {% endif %}{{ project.year }}{% elsif project.date %}{% if project.venue %}, {% endif %}{{ project.date }}{% endif %}</p>
       {% endif %}
+      {% if project.description %}<div class="project-description">{{ project.description | markdownify }}</div>{% endif %}
       <div class="project-links">
         {% if project.link and project.link != empty %}
-          {{ project.link | markdownify }}
+          {% if project.project_path and project.project_path != empty %}
+            {{ project.link | markdownify | remove: '<p>' | remove: '</p>' }} /
+          {% else %}
+            {{ project.link | markdownify }}
+          {% endif %}
         {% elsif project.links.size > 0 %}
           {% assign separator = '' %}{% for link in project.links %}{% if link.url and link.url != empty %}{{ separator }}<a href="{{ link.url | escape }}">{{ link.label | escape }}</a>{% assign separator = ' / ' %}{% endif %}{% endfor %}
         {% elsif project.url %}
           <a href="{{ project.url | escape }}">Project page</a>
         {% endif %}
+        {% if project.project_path and project.project_path != empty %}
+          <a href="{{ project_page_url | escape }}">Project page</a>
+        {% endif %}
       </div>
-      {% if project.description %}<div class="project-description">{{ project.description | markdownify }}</div>{% endif %}
     </div>
   </article>
       {% endfor %}
@@ -123,6 +133,9 @@ permalink: /
     <ul class="record-list about-project-records">
       {% for project in bio.projects %}
   {% assign project_page_url = project.project_url | default: project.url %}
+  {% if project.project_path and project.project_path != empty %}
+    {% capture project_page_url %}{% link {{ project.project_path }} %}{% endcapture %}
+  {% endif %}
   {% if project_page_url == nil or project_page_url == empty %}
     {% for link in project.links %}{% assign label = link.label | downcase %}{% if label == 'project page' %}{% assign project_page_url = link.url %}{% endif %}{% endfor %}
     {% if project.link contains '[Project page](' %}{% assign project_page_url = project.link | split: '[Project page](' | last | split: ')' | first %}{% endif %}
@@ -145,6 +158,9 @@ permalink: /
           {% if project_link_items != empty %}<div class="markdown-content"><ul><li>{{ project_link_items }}</li></ul></div>{% endif %}
         {% elsif project.url %}
           <div class="markdown-content"><ul><li><a href="{{ project.url | escape }}">Project page</a></li></ul></div>
+        {% endif %}
+        {% if project.project_path and project.project_path != empty %}
+          <div class="markdown-content"><ul><li><a href="{{ project_page_url | escape }}">Project page</a></li></ul></div>
         {% endif %}
       </li>
       {% endfor %}

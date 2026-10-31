@@ -121,7 +121,12 @@ kramdown:
       start_line: 1
 include:
   - _pages
+  - _project
 exclude:
+  # Agent skill symlinks otherwise make Listen watch the same directory twice.
+  - .agents/
+  - .claude/
+  - .codex/
   - test/
   - requirements.txt
   - AGENTS.md

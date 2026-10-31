@@ -15,47 +15,35 @@ nav: false
 
 - <b>“SegJoint: Motion-Free Segmentation Conditioning for Video Prediction”</b>
 - 공동 1저자로 학술대회 포스터 발표 진행
-- \[paper\]()
+- [Paper](/assets/pdf/SegJoint.pdf){:target=\"_blank\" rel=\"noopener noreferrer\"} / [Code](https://github.com/onebom)
 
 ---
 
 ## Abstract
 
-Video prediction은 과거 영상으로부터 미래 프레임을 예측하는 과제로, 미래 불확실성으로 예측에 어려움이 있다.
-
-이를 다루기 위해 최근 방식은 optical flow와 같은 보조 표현을 활용하여 미래 움직임 예측과 움직임에 조건화된 영상 생성을 분리하여 학습한다.
-
+Video prediction은 과거 영상으로부터 미래 프레임을 예측하는 과제로, 미래 불확실성으로 예측에 어려움이 있다. 이를 다루기 위해 최근 방식은 optical flow와 같은 보조 표현을 활용하여 미래 움직임 예측과 움직임에 조건화된 영상 생성을 분리하여 학습한다. 
 그러나 객체별로 움직임을 예측하지 않고 공간 영역을 명시적으로 구분하는 제약이 부족하여, 여러 객체가 근접하거나 복잡하게 움직이는 장면에서 객체의 외형이 혼합되거나 사라지는 다중 객체 왜곡이 발생할 수 있다.
-
 본 연구에서는 이러한 문제를 완화하기 위해 미래 프레임 생성과 객체별 미래 영역 예측을 공동으로 학습하여, 각 객체의 표현이 예측한 객체 영역에 반영되도록하는 SegJoint 프레임워크를 제안한다.
-
 SegJoint는 과거 instance mask를 기반으로 추출한 객체 임베딩을 cross-attention으로 주입하고, 해당 attention score에 segmentation supervision을 부여하여 객체별 공간 구분을 유도한다.
-
 Cityscapes에서 baseline 대비 PSNR·SSIM·LPIPS가 모두 개선되었으며, ablation study와 정성적 비교를 통해 제안 구성 요소의 성능 기여와 다중 객체 왜곡의 완화 양상을 확인하였다.
 
 ## Introduction
 
 Video prediction은 과거에 관측된 동영상으로부터 이후에 나타날 미래 동영상을 예측하는 과제다. 
-
-동일한 과거 동영상이 주어져도 여러 미래가 가능하므로, 모델은 미래의 불확실성이 반영된 복잡한 조건부 동영상 분포를 학습해야 한다.
-
-이러한 분포를 효과적으로 학습하기 위해 최근 video prediction 방식은 미래 움직임의 분포와 해당 움직임에 조건화된 동영상 분포를 분리하여 학습한다.
-
-구체적으로 optical flow와 같은 장면 단위의 미래 움직임을 나타내는 보조 표현을 먼저 예측하고, 이를 바탕으로 미래 프레임들을 생성한다.
-
+동일한 과거 동영상이 주어져도 여러 미래가 가능하므로, 모델은 미래의 불확실성이 반영된 복잡한 조건부 동영상 분포를 학습해야 한다. 
+이러한 분포를 효과적으로 학습하기 위해 최근 video prediction 방식은 미래 움직임의 분포와 해당 움직임에 조건화된 동영상 분포를 분리하여 학습한다. 
+구체적으로 optical flow와 같은 장면 단위의 미래 움직임을 나타내는 보조 표현을 먼저 예측하고, 이를 바탕으로 미래 프레임들을 생성한다. 
 다만 이 구조에서는 보조 표현의 예측 오류가 최종 영상 생성 품질에 영향을 미칠 수 있다.
 
-### <b>Problem statement</b>
+### Problem statement
 
-1. <b>다중 객체 왜곡</b>
-
-   기존 방식은 미래 움직임을 나타내는 보조 표현을 학습하지만, 이를 객체 단위로 분리하여 예측하지 않으며 미래 프레임 생성 과정에서 공간 영역 별 특징이 객체 별로 구분하도록 하는 제약이 없다.
-
-   따라서 여러 객체의 외형과 상대적 위치가 복잡하게 변하는 장면에서는 객체별 미래 움직임을 정확하게 추정하기 어려울 수 있다.
-
-   또한 생성 과정에서 객체들의 영역이 근접한 경우, 서로 다른 객체의 외형이 혼합되거나 일부 객체가 사라지는 <b>다중 객체 왜곡</b>이 발생할 수 있다.
+1. <b>Multi object distortion</b>
 
    \[figure/동영상\]
+
+   기존 방식은 미래 움직임을 나타내는 보조 표현을 학습하지만, 이를 객체 단위로 분리하여 예측하지 않으며 미래 프레임 생성 과정에서 공간 영역 별 특징이 객체 별로 구분하도록 하는 제약이 없다. 
+   따라서 여러 객체의 외형과 상대적 위치가 복잡하게 변하는 장면에서는 객체별 미래 움직임을 정확하게 추정하기 어려울 수 있다. 
+   또한 생성 과정에서 객체들의 영역이 근접한 경우, 서로 다른 객체의 외형이 혼합되거나 일부 객체가 사라지는 <b>다중 객체 왜곡</b>이 발생할 수 있다.
 
 ## Method
 
@@ -135,9 +123,8 @@ SegJoint는 객체 표현을 생성 과정에 주입하는 cross-attention에 se
 
 </details>
 
-### Result
-
-1. <b>Quantitative Results</b>
+## Result
+### <b>Quantitative Results</b>
 
    <b>\[Comparison between baselines\]</b>
 
@@ -164,7 +151,7 @@ SegJoint는 객체 표현을 생성 과정에 주입하는 cross-attention에 se
 
    여기에 future segmentation loss를 추가한 최종 모델은 PSNR 23.76 dB, SSIM 0.719, LPIPS 0.093, FVD 100.62를 기록하여 비교한 구성 중 모든 지표에서 가장 좋은 성능을 보였다. 이러한 결과는 객체 표현을 생성 조건으로 제공하는 것에 더해, 해당 표현과 미래 공간 영역 사이의 대응 관계를 사용해 객체 별 미래 영역을 예측하도록 유도하는 supervision이 추가적인 예측 품질 개선에 기여함을 보여준다.
 
-2. <b>Qualitative Results</b>
+### <b>Qualitative Results</b>
 
 ![SegJoint qualitative comparison](/assets/img/segjoint/qualitative-results.png)
 

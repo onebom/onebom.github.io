@@ -31,6 +31,9 @@ nav_order: 3
       {% if project.venue or project.year or project.date %}
       <p class="project-venue">{% if project.venue %}<em>{{ project.venue | escape }}</em>{% endif %}{% if project.year %}{% if project.venue %}, {% endif %}{{ project.year }}{% elsif project.date %}{% if project.venue %}, {% endif %}{{ project.date }}{% endif %}</p>
       {% endif %}
+      {% if project.authors or project.name %}
+        {% if project.description %}<div class="project-description">{{ project.description | markdownify }}</div>{% endif %}
+      {% endif %}
       <div class="project-links">
         {% if project.link and project.link != empty %}
           {{ project.link | markdownify }}
@@ -40,7 +43,9 @@ nav_order: 3
           <a href="{{ project.url | escape }}">Project page</a>
         {% endif %}
       </div>
-      {% if project.description %}<div class="project-description">{{ project.description | markdownify }}</div>{% endif %}
+      {% unless project.authors or project.name %}
+        {% if project.description %}<div class="project-description">{{ project.description | markdownify }}</div>{% endif %}
+      {% endunless %}
     </div>
   </article>
   {% endfor %}

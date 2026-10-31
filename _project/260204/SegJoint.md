@@ -73,7 +73,7 @@ SegJoint는 객체 표현을 생성 과정에 주입하는 cross-attention에 se
 
 이때 softmax 이전 attention score로 미래 객체 영역을 예측하고 segmentation supervision을 부여함으로써, 객체별 조건 정보를 반영하는 attention이 미래 영역 예측에도 활용되도록 공동으로 학습한다.
 
-<details open markdown="1">
+<details markdown="1">
 <summary><b>Instance-conditioned Denoising</b></summary>
 
 1. <b>Instance Mask Extraction</b>
@@ -102,7 +102,7 @@ SegJoint는 객체 표현을 생성 과정에 주입하는 cross-attention에 se
 
 </details>
 
-<details open markdown="1">
+<details markdown="1">
 <summary><b>Segmentation-guided Joint Learning</b></summary>
 
 - <b>Future Instance Mask Prediction</b>

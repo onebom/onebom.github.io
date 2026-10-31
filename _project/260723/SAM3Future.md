@@ -83,7 +83,7 @@ SAM3Future는 사전 학습된 SAM3의 객체 표현을 활용하여 객체별 �
 예측한 객체별 영역 확률 맵은 이진 마스크로 변환하여 디코더 초기 단계의 instance-masked attention에 사용한다. 
 이를 통해 각 객체 영역의 feature가 동일 객체에 할당된 영역의 feature만 참조하도록 제한하여, 해당 영역에 속하지 않는 객체의 정보가 혼합되는 것을 억제한다. 
 
-<details open markdown="1">
+<details markdown="1">
 <summary><b>SAM3 object representation conditioned Denoising</b></summary>
 
 1. <b>Instance Mask and Embedding Extraction</b>
@@ -107,7 +107,7 @@ SAM3Future는 사전 학습된 SAM3의 객체 표현을 활용하여 객체별 �
 
 </details>
 
-<details open markdown="1">
+<details markdown="1">
 <summary><b>Segmentation-guided Joint Learning</b></summary>
 
 - <b>Future Instance Mask Prediction</b>
@@ -122,7 +122,7 @@ SAM3Future는 사전 학습된 SAM3의 객체 표현을 활용하여 객체별 �
 
 </details>
 
-<details open markdown="1">
+<details markdown="1">
 <summary><b>Instance-masked Decoding</b></summary>
 
 1. <b>Binary Mask Construction</b>
